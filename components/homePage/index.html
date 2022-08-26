@@ -88,9 +88,46 @@
                                     </strong>
                                 </span>
                             </a>
-                            <div class="header-cart__list">
-                                <span class="header-cart-text">No products in the cart.</span>
-                            </div>
+                            <div class="header-cart__list has-cart">
+                                <!-- No Cart -->
+                                <span class="header-cart-noCart">No products in the cart.</span>
+                                <!-- Has Cart -->
+                                <div class="contain_cart-list">
+                                    <ul class="cart-list">
+                                        <li class="cart-item">
+                                            <img src="./img/main_product-4.jpg" alt="" class="cart-item__img">
+                                            <div class="cart-item__content">
+                                                <div class="cart-item-content__main">
+                                                    <span class="cart-item__name">Skull short-32</span>
+                                                    <span class="divide">-</span>
+                                                    <span class="cart-item__size">XL</span>
+                                                </div>
+                                                <div class="cart-item-content__sub">
+                                                    <span class="cart-item__quantity">1</span>
+                                                    <span class="minus">x</span>
+                                                    <span class="cart-item__price">450.000</span>
+                                                    <span class="pSymbol">₫</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart-item__delete">
+                                                <span>x</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="cart-list__control">
+                                        <div class="cart-list__subtotal">
+                                            <label for="" class="cart-list__total-label">Subtotal:</label>
+                                            <div class="cart-list__price">
+                                                1.000.000
+                                                <span class="pSymbol">₫</span>
+                                            </div>  
+                                        </div>
+                                        <div class="btn btn-success btn-viewcart">VIEW CART</div>
+                                        <div class="btn btn-success btn-checkout">CHECKOUT</div>
+                                    </div>
+                                </div>
+
+                            </div>  
                         </li>
                     </ul>
                 </div>
@@ -101,8 +138,8 @@
         <main class="main">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12 col-md-12 col-12">
-                        <img src="/public/img/main-home-img.jpg" alt="" class="w-100">
+                    <div class="col-xl-12 col-md-12 col-12 d-flex align-items-center justify-content-center">
+                        <img src="/public/img/main-home-img.jpg" alt="" class="w-90">
                     </div>
                 </div>
                 <div class="row">
@@ -119,16 +156,16 @@
                               <div class="carousel-item active">
                                 <ul class="row carousel-item-list">
                                     <li class="col-xl-3 carousel-item-product">
-                                        <img src="/components/homePage/img/main_img.png" alt="">
-                                    </li>
-                                    <li class="col-xl-3 carousel-item-product">
                                         <img src="/components/homePage/img/main_product-2.jpg" alt="">
                                     </li>
                                     <li class="col-xl-3 carousel-item-product">
-                                        <img src="/components/homePage/img/main_img.png" alt="">
+                                        <img src="/components/homePage/img/main_product-3.jpg" alt="">
                                     </li>
                                     <li class="col-xl-3 carousel-item-product">
-                                        <img src="/components/homePage/img/main_product-3.jpg" alt="">
+                                        <img src="/components/homePage/img/main_product-4.jpg" alt="">
+                                    </li>
+                                    <li class="col-xl-3 carousel-item-product">
+                                        <img src="/components/homePage/img/main_product-5.jpg" alt="">
                                     </li>
                                 </ul>
                               </div>
@@ -144,14 +181,14 @@
                                         <img src="/components/homePage/img/main_product-4.jpg" alt="">
                                     </li>
                                     <li class="col-xl-3 carousel-item-product">
-                                        <img src="/components/homePage/img/main_img.png" alt="">
+                                        <img src="/components/homePage/img/main_product-3.jpg" alt="">
                                     </li>
                                 </ul>
                               </div>
                               <div class="carousel-item">
                                 <ul class="row carousel-item-list">
                                     <li class="col-xl-3 carousel-item-product">
-                                        <img src="/components/homePage/img/main_product-3.jpg" alt="">
+                                        <img src="/components/homePage/img/main_product-2.jpg" alt="">
                                     </li>
                                     <li class="col-xl-3 carousel-item-product">
                                         <img src="/components/homePage/img/main_product-5.jpg" alt="">
@@ -160,7 +197,7 @@
                                         <img src="/components/searchPage/img/main_product.jpg" alt="">
                                     </li>
                                     <li class="col-xl-3 carousel-item-product">
-                                        <img src="/components/homePage/img/main_img.png" alt="">
+                                        <img src="/components/homePage/img/main_product-4.jpg" alt="">
                                     </li>
                                 </ul>
                               </div>
@@ -186,22 +223,22 @@
                         </h2>
                         <div class="row">
                             <div class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center">
-                                <img src="/components/homePage/img/main_product.jpg" alt="" class="main__product-img">
+                                <img src="/components/homePage/img/type_img.png" alt="" class="main__product-img">
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center">
-                                <img src="/components/homePage/img/main_product.jpg" alt="" class="main__product-img">
+                                <img src="/components/homePage/img/type_img2.png" alt="" class="main__product-img">
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center">
-                                <img src="/components/homePage/img/main_product.jpg" alt="" class="main__product-img">
+                                <img src="/components/homePage/img/type_img3.png" alt="" class="main__product-img">
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center">
-                                <img src="/components/homePage/img/main_product.jpg" alt="" class="main__product-img">
+                                <img src="/components/homePage/img/type_img4.png" alt="" class="main__product-img">
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center">
-                                <img src="/components/homePage/img/main_product.jpg" alt="" class="main__product-img">
+                                <img src="/components/homePage/img/type_img5.png" alt="" class="main__product-img">
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center">
-                                <img src="/components/homePage/img/main_product.jpg" alt="" class="main__product-img">
+                                <img src="/components/homePage/img/type_img6.png" alt="" class="main__product-img">
                             </div>
                         </div>
                     </div>
@@ -215,13 +252,13 @@
                         </h2>
                         <div class="row">
                             <div class="col-xl-4 main__subProduct">
-                                <img src="/components/homePage/img/main_subProduct.jpg" alt="">
+                                <img src="/public/img/masthead_logo.jpg" alt="">
                             </div>
                             <div class="col-xl-4 main__subProduct">
                                 <img src="/components/homePage/img/main_subProduct.jpg" alt="">
                             </div>
                             <div class="col-xl-4 main__subProduct">
-                                <img src="/components/homePage/img/main_subProduct.jpg" alt="">
+                                <img src="/components/homePage/img/life-style__img.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -268,42 +305,23 @@
     <div class="modal-layout">
         <div class="contain-modal">
             <div class="modal-inner">
-                <h2 class="modal-title">Login</h2>
-                <!-- <form action="" class="modal-form">
-                    <div class="form__row">
-                        <label for="" class="form-label">Username or email address </label>
-                        <input type="text" class="form-input">
-                    </div>
-                    <div class="form__row">
-                        <label for="" class="form-label">Password </label>
-                        <input type="text" class="form-input">
-                    </div>
-                    <div class="form__row">
-                        <input type="checkbox" class="check-remember">
-                        <label class="remember_me" for="">Remember me</label>
-                    </div>
-                    <div class="form__row">
-                        <button class="btn btn-priamry">Log in</button>
-                    </div>
-                    <div class="form__row">
-                        <label for="" class="lost-pw">Lost your password?</label>
-                    </div>
-                </form> -->
+                <h2 class="modal-heading">Login</h2>
                 <form>
-                    <div class="form-group">
+                    <div class="form-group form-group__wrapper">
                       <label for="exampleInputEmail1">Username or email address </label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter email">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-group__wrapper">
                       <label for="exampleInputPassword1">Password</label>
                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
-                    <div class="form-check">
+                    <div class="form-check form-check__wrapper">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Log in</button>
-                  </form>
+                    <button type="submit" class="btn btn__primary">Log in</button>
+                    <span class="lost-pw">Lost your password?</span>
+                </form>
             </div>
         </div>
     </div>
