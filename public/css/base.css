@@ -1,0 +1,26 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --header-height:130px;
+    --header__top-height: 30px;
+    --masthead-height: calc(var(--header-height) - var(--header__top-height))
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height:1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

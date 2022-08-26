@@ -1,0 +1,132 @@
+/* main-sPage */
+.main-sPage__header{
+    padding-top: 20px;
+}
+/* breakcrumb */
+.breadcrumbs_list{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.breadcrumb__link-prev{
+    color: rgba(102,102,102,.7);
+}
+.breadcrumb__link-current{
+    color: #222;
+    font-weight: 600;
+}
+.breadcrumbs_list a:hover{
+    text-decoration: none;
+    color: var(--black-color);
+    cursor: text
+    border-he
+}
+
+.breadcrumb__link-prev:hover{
+   color: var(--black-color);
+   text-decoration: none;
+}
+.divider{
+    color: rgba(102,102,102,.7);
+    margin: 0 4px;
+
+}
+.main-sPage__header-sort{
+    font-size: 1.6rem;
+
+
+}
+.main-sPage__header-sort-label{
+    color: rgba(102,102,102,.7);
+    margin-right: 16px;
+
+}
+
+.control-sort{
+    margin: 5px 12px;
+    font-size: 1.6rem !important;
+    box-shadow: inset 0 -1.4em 1em 0 rgb(0 0 0 / 2%);
+    outline: none;
+}
+
+/* main-sPage-content */
+.main-sPage__content{
+    margin-top: 30px;
+}
+
+
+
+/* sPage-content-product */
+.sPage__content-product-desc{
+    padding: 10px 0 18px;
+    font-size: 1.5rem;
+    color: var(--black-color);
+    position: relative;
+
+}
+.sPage__content-product-img{
+    width: 100%;
+}
+.sPage__content-product-name{
+    display:block;
+    font-weight: 400;
+}
+.sPage__content-product-price{
+    font-weight: 600;
+    position: relative;
+    font-size: 1.6rem;
+}
+.symbolmoney{
+    position: absolute;
+    right: -11px;
+    font-size: 1.2rem;
+}
+.product-quickview{
+    width: 100%;
+    height:34px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top:0;
+}
+
+/* Pagination */
+.sPage-pagination li a{
+    font-size: 2rem;
+    border-radius: 100%;
+    padding: 4px 12px;
+    border: 1px solid #787878;
+    color: #787878;
+
+}
+.sPage-pagination a.active{
+    cursor: text;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: 1px solid #787878;
+
+}
+.sPage-pagination li a:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    transition: all linear 0.2s;
+}
+.sPage-pagination li{
+    margin: 10px 3px;
+}
+.sPage-pagination li:first-child a {
+    border-top-left-radius: 100% !important;
+    border-bottom-left-radius: 100% !important;
+}
+.sPage-pagination li:last-child a {
+    border-top-right-radius: 100% !important;
+    border-bottom-right-radius: 100% !important;
+}
+.sPage-pagination li i{
+    font-size: 1.6rem;
+    position: relative;
+    top: -1px;
+}
