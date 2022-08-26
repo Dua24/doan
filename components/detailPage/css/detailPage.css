@@ -1,5 +1,6 @@
 .contain-detail{
     margin-top: 30px;
+    margin-bottom: 60px;
 }
 .detail__product-img{
     width: 100%;
@@ -28,9 +29,7 @@
 }
 
 /* detail product */
-/* .contain-detail__product{
-    border-left: 1px solid #d6d6d673;
-} */
+
 .main-sPage__content-category.line-border-right{
     border-right: 1px solid #d6d6d673;
 }
@@ -341,6 +340,12 @@
     color: #777;
     padding: 12px 40px 12px 10px;
     margin-left: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.product-footer_accordian-item:hover .accordian-item-title{
+    color: #0a0a0a;
+    transition: color linear 0.2s;
 }
 .product-footer_accordian-item i{
     margin-right: 10px;
@@ -349,4 +354,7 @@
 .product-footer_accordian-item:last-child {
     border-bottom: 1px solid #ddd;
 
+}
+.more-accordian__item{
+    margin: 15px 30px 60px 30px;
 }

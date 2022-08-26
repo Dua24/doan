@@ -15,7 +15,9 @@ html{
     box-sizing: border-box;
 }
 
-
+.mb-30{
+    margin-bottom: 30px;
+}
 @keyframes fadeIn {
     from{
         opacity: 0;
