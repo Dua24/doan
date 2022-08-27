@@ -254,6 +254,7 @@
     padding: 15px 0;
     margin-bottom: 8px;
 }
+.cart-list__total-label
 
 .header-cart__list:before{
     content: "";
