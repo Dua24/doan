@@ -202,12 +202,13 @@
     outline: none;
     font-weight: 500;
     color: #666666;
-    transition: border linear 0.1s;
     cursor: pointer;
 
 }
 .form-cart__size-item:hover{
-    border: 2px solid #d6d6d6;
+    box-shadow: 0 0 0 3px rgb(0 0 0 / 10%);
+    border: 1px solid #e9e9e9;
+    transition: all linear 0.2s;
 
 }
 .form-cart__contain-add{

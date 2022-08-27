@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/public/css/header.css">
     <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/modal.css">
     <link rel="stylesheet" href="/public/css/category.css">
     <link rel="stylesheet" href="/components/searchPage/css/searchPage.css">
     <link rel="stylesheet" href="/public/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
@@ -26,77 +27,285 @@
 </head>
 <body>
     <div class="search-page">
-        <!-- header -->
-        <header id="header">
+         <!-- header -->
+         <header id="header">
             <div class="header__top">
-                <div class="container d-flex h-100 justify-content-between">
-                    <strong class="header__top-label">All BLVCK Skatewear, travel clothing Good friends only.</strong>
-                    <ul class="header__top-list">
-                        <li class="header__top-item ">
-                            <a class="header__top-link">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <div class="header__top-item-label">Follow on Facebook</div>
-                        </li>
-                        <li class="header__top-item ">
-                            <a class="header__top-link">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <div class="header__top-item-label">Follow on Instagram</div>
-                        </li>
-                    </ul>
+              <div class="container d-flex h-100 justify-content-between">
+                <div class="row w-100">
+                  <strong class="header__top-label col-xl-10 col-lg-10 col-md-12"
+                    >All BLVCK Skatewear, travel clothing Good friends only.</strong
+                  >
+                  <ul
+                    class="header__top-list col-xl-2 col-lg-2 d-xl-flex d-lg-flex d-md-none justify-content-end"
+                  >
+                    <li class="header__top-item">
+                      <a class="header__top-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                      <div class="header__top-item-label">Follow on Facebook</div>
+                    </li>
+                    <li class="header__top-item">
+                      <a class="header__top-link">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <div class="header__top-item-label">Follow on Instagram</div>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
             <div class="masthead">
-                <div class="container d-flex align-items-center">
-                    <div class="masthead__logo">
-                        <a href="/components/homePage/index.html" class="masthead__logo-link">
-                            <img src="/public/img/masthead_logo.jpg" alt="">
-                        </a>
-                    </div>
-                    <ul class="masthead__list align-items-center mr-auto">
-                        <li class="masthead__item">
-                            <a href="" class="masthead__item-link">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a>
-                        </li>
-                        <li class="masthead__item">
-                            <a href="/components/homePage/index.html" class="masthead__item-link">HOME PAGE</a>
-                        </li>
-                        <li class="masthead__item">
-                            <a href="/components/detailPage/detailPage.html" class="masthead__item-link">DETAIL PAGE</a>
-                        </li>
-                    </ul>
-                    <ul class="masthead__list align-items-center">
-                        <li class="masthead__item">
-                            <a href="" class="masthead__item-link">
-                                LOGIN
-                            </a>
-                        </li>
-                        <li class="header-divider"></li>
-                        <li class="masthead__item header-cart">
-                            <a href="" class="masthead__item-link">
-                                <span class="header-cart__title"> CART / 
-                                    <span class="header-cart_price">
-                                        0
+              <div class="container d-flex align-items-center">
+                <div class="row w-100">
+                    <div class="menu-in_md d-xl-none d-lg-none col-md-2 col-2">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- MODAL MENU -->
+                        <!-- class "menu" for modal-layout -->
+                        <div class="modal-layout">
+                            <div class="contain-modal">
+                                <div class="modal-inner modal-inner-menu">
+                                    <div class="modal-inner__search">
+                                        <input type="text" class="modal-inner__search-input">
+                                        <button class="btn btn__primary">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                    <ul class="modal-inner__list">
+                                        <li class="modal-inner__item">
+                                            <a href="" class="modal-inner__item-link">search page</a>
+                                        </li>
+                                        <li class="modal-inner__item">
+                                            <a href="" class="modal-inner__item-link">detail page</a>
+                                        </li>
+                                        <li class="modal-inner__item">
+                                            <a href="" class="modal-inner__item-link">login</a>
+                                        </li>
+                                        <li class="modal-inner__item">
+                                            <a href="" class="modal-inner__item-link">register</a>
+                                        </li>
+                                        <li class="modal-inner__item">
+                                            <a href="" class="modal-inner__item-link">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                                <i class="fa-brands fa-instagram"></i>
+                                                </a>
+                                        </li>
+                                    </ul>
+                                    <span class="menu-exit">
+                                        <i class="fa-solid fa-xmark"></i>
                                     </span>
-                                    <span class="header-cart__symbol">₫</span>
-                                </span>
-                                <span class="header-cart__icon">
-                                    <strong>
-                                        0
-                                    </strong>
-                                </span>
-                            </a>
-                            <div class="header-cart__list">
-                                <span class="header-cart-text">No products in the cart.</span>
+                                </div>
                             </div>
+                        </div>
+                        
+                    </div>
+                  <div class="masthead__logo col-xl-2 col-lg-2 col-md-8 col-8">
+                    <a
+                      href="/components/homePage/index.html"
+                      class="masthead__logo-link"
+                    >
+                      <img src="/public/img/masthead_logo.jpg" alt="" />
+                    </a>
+                  </div>
+                  <ul class="masthead__list justify-content-start col-xl-5 col-lg-5 d-xl-flex d-lg-flex d-md-none d-none">
+                    <li class="masthead__item">
+                      <a
+                        href="/components/homePage/index.html"
+                        class="masthead__item-link"
+                        >HOME PAGE</a
+                      >
+                    </li>
+                    <li class="masthead__item">
+                      <a
+                        href="/components/detailPage/detailPage.html"
+                        class="masthead__item-link"
+                        >DETAIL PAGE</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="masthead__list justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flex d-md-flex d-flex">
+                    <div class="row align-items-center">
+                        <li class="masthead__item d-xl-block d-lg-block d-md-none d-none">
+                          <a href="" class="masthead__item-link"> LOGIN </a>
                         </li>
-                    </ul>
+                        <li class="header-divider d-xl-block d-lg-block d-md-none d-none"></li>
+                        <li class="masthead__item header-cart d-xl-block d-lg-block d-md-block d-block">
+                          <div class="masthead__item-link">
+                            <span class="header-cart__title">
+                              CART /
+                              <span class="header-cart_price"> 0 </span>
+                              <span class="header-cart__symbol">₫</span>
+                            </span>
+                            <span class="header-cart__icon">
+                              <strong> 0 </strong>
+                            </span>
+                          </div>
+                          <!-- CART -->
+                          <div class="header-cart__list has-cart">
+                            <!-- No Cart -->
+                            <span class="header-cart-noCart"
+                              >No products in the cart.</span
+                            >
+                            <!-- class: has-cart -->
+                            <div class="contain_cart-list">
+                              <ul class="cart-list">
+                                <li class="cart-item">
+                                  <img
+                                    src="./img/main_product.jpg"
+                                    alt=""
+                                    class="cart-item__img"
+                                  />
+                                  <div class="cart-item__content">
+                                    <div class="cart-item-content__main">
+                                      <span class="cart-item__name"
+                                        >Skull short-32</span
+                                      >
+                                      <span class="divide">-</span>
+                                      <span class="cart-item__size">XL</span>
+                                    </div>
+                                    <div class="cart-item-content__sub">
+                                      <span class="cart-item__quantity">1</span>
+                                      <span class="minus">x</span>
+                                      <span class="cart-item__price"
+                                        >450.000
+                                        <span class="pSymbol">₫</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__delete">
+                                    <span>x</span>
+                                  </div>
+                                </li>
+                                <li class="cart-item">
+                                  <img
+                                    src="./img/main_product.jpg"
+                                    alt=""
+                                    class="cart-item__img"
+                                  />
+                                  <div class="cart-item__content">
+                                    <div class="cart-item-content__main">
+                                      <span class="cart-item__name"
+                                        >Skull short-32</span
+                                      >
+                                      <span class="divide">-</span>
+                                      <span class="cart-item__size">XL</span>
+                                    </div>
+                                    <div class="cart-item-content__sub">
+                                      <span class="cart-item__quantity">1</span>
+                                      <span class="minus">x</span>
+                                      <span class="cart-item__price"
+                                        >450.000
+                                        <span class="pSymbol">₫</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__delete">
+                                    <span>x</span>
+                                  </div>
+                                </li>
+                                <li class="cart-item">
+                                  <img
+                                    src="./img/main_product.jpg"
+                                    alt=""
+                                    class="cart-item__img"
+                                  />
+                                  <div class="cart-item__content">
+                                    <div class="cart-item-content__main">
+                                      <span class="cart-item__name"
+                                        >Skull short-32</span
+                                      >
+                                      <span class="divide">-</span>
+                                      <span class="cart-item__size">XL</span>
+                                    </div>
+                                    <div class="cart-item-content__sub">
+                                      <span class="cart-item__quantity">1</span>
+                                      <span class="minus">x</span>
+                                      <span class="cart-item__price"
+                                        >450.000
+                                        <span class="pSymbol">₫</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__delete">
+                                    <span>x</span>
+                                  </div>
+                                </li>
+                                <li class="cart-item">
+                                  <img
+                                    src="./img/main_product.jpg"
+                                    alt=""
+                                    class="cart-item__img"
+                                  />
+                                  <div class="cart-item__content">
+                                    <div class="cart-item-content__main">
+                                      <span class="cart-item__name"
+                                        >Skull short-32</span
+                                      >
+                                      <span class="divide">-</span>
+                                      <span class="cart-item__size">XL</span>
+                                    </div>
+                                    <div class="cart-item-content__sub">
+                                      <span class="cart-item__quantity">1</span>
+                                      <span class="minus">x</span>
+                                      <span class="cart-item__price"
+                                        >450.000
+                                        <span class="pSymbol">₫</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__delete">
+                                    <span>x</span>
+                                  </div>
+                                </li>
+                                <li class="cart-item">
+                                  <img
+                                    src="./img/main_product.jpg"
+                                    alt=""
+                                    class="cart-item__img"
+                                  />
+                                  <div class="cart-item__content">
+                                    <div class="cart-item-content__main">
+                                      <span class="cart-item__name"
+                                        >Skull short-32</span
+                                      >
+                                      <span class="divide">-</span>
+                                      <span class="cart-item__size">XL</span>
+                                    </div>
+                                    <div class="cart-item-content__sub">
+                                      <span class="cart-item__quantity">1</span>
+                                      <span class="minus">x</span>
+                                      <span class="cart-item__price"
+                                        >450.000
+                                        <span class="pSymbol">₫</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__delete">
+                                    <span>x</span>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="cart-list__control">
+                                <div class="cart-list__subtotal">
+                                  <label for="" class="cart-list__total-label"
+                                    >Subtotal:</label
+                                  >
+                                  <div class="cart-list__price">
+                                    1.000.000
+                                    <span class="cart-pSymbol">₫</span>
+                                  </div>
+                                </div>
+                                <div class="btn btn-viewcart">VIEW CART</div>
+                                <div class="btn btn-checkout">CHECKOUT</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                    </div>
+                  </ul>
                 </div>
+              </div>
             </div>
-            
-        </header>
+          </header>
 
         <!-- main -->
         <main class="main-sPage">
@@ -124,7 +333,7 @@
                 </div>
                 <div class="row main-sPage__content">
                     <!-- Category -->
-                    <div class="col-xl-3 main-sPage__content-category">
+                    <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block d-md-none main-sPage__content-category">
                         <ul class="category-list">
                             <li class="category-item">
                                 <a href="#" class="category-item-link">
@@ -200,9 +409,9 @@
                         </ul>
                     </div>
                     <!-- Product -->
-                    <div class="col-xl-9 sPage__content-product">
+                    <div class="col-xl-9 col-lg-9 col-md-12 col sPage__content-product">
                         <div class="row">
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -217,7 +426,7 @@
                                     </div> -->
                                 </div>
                             </div>
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -226,7 +435,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -235,7 +444,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -244,7 +453,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -253,7 +462,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -262,7 +471,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
                                 <img src="/components/homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -328,6 +537,38 @@
                 </div>
             </div>
         </footer>
+
+            <!-- MODAL_LOGIN -->
+            <!-- add class "login" for -->
+        <div class="modal-layout">
+            <div class="contain-modal">
+                <div class="modal-inner modal-inner-login">
+                    <h2 class="modal-heading modal-heading__login">Login</h2>
+                    <!-- <h2 class="modal-heading modal-heading-register">Register</h2> -->
+                    <form>
+                        <div class="form-group form-group__wrapper">
+                        <label for="exampleInputEmail1">Username or email address </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter email">
+                        </div>
+                        <div class="form-group form-group__wrapper">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <!-- <div class="form-group form-group__wrapper">
+                            <label for="exampleInputPassword1">Retype Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div> -->
+                        <div class="form-check form-check__wrapper">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn__primary">Log in</button>
+                        <!-- <button type="submit" class="btn btn__primary">Register</button> -->
+                        <span class="lost-pw">Lost your password?</span>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

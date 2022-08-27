@@ -23,13 +23,20 @@
     font-size: 2.6rem;
     padding: 10px 16px;
 }
-
+.main__img{
+    width: 90%;
+    
+}
 /* main_slider */
 .carousel-item-list{
     list-style: none;
     padding-left: 0;
 }
-
+.carousel-item-product img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 .carousel:hover .carousel-control{
     transition: all 0.4s linear;
     background-color: #fff !important;
@@ -73,7 +80,9 @@
     height:500px
 }
 .main__product img{
-    height:90%
+    width: 100%;
+    height: 77%;
+    object-fit: contain;
 }
 .main__product:hover{
     transform:translateY(-4px);
