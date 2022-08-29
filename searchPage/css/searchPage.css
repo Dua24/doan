@@ -47,6 +47,7 @@
     font-size: 1.6rem !important;
     box-shadow: inset 0 -1.4em 1em 0 rgb(0 0 0 / 2%);
     outline: none;
+    width: 100%;
 }
 
 /* main-sPage-content */

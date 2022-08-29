@@ -26,10 +26,10 @@
     <title>Search Page</title>
 </head>
 <body>
-    <div class="search-page">
+    <div class="container-fluid">
          <!-- header -->
-         <header id="header">
-            <div class="header__top">
+         <header id="header" class="row">
+            <div class="header__top col-12">
               <div class="container d-flex h-100 justify-content-between">
                 <div class="row w-100">
                   <strong class="header__top-label col-xl-10 col-lg-10 col-md-12"
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            <div class="masthead">
+            <div class="masthead col-12">
               <div class="container d-flex align-items-center">
                 <div class="row w-100">
                     <div class="menu-in_md d-xl-none d-lg-none col-md-2 col-2">
@@ -308,16 +308,17 @@
           </header>
 
         <!-- main -->
-        <main class="main-sPage">
+        <main class="main-sPage row">
             <div class="container">
-                <div class="main-sPage__header d-flex justify-content-between align-items-center">
-                    <nav class="breadcrumbs_list">
+              <div class="row">
+                <div class="col-12 main-sPage__header d-flex align-items-center ">
+                    <nav class="breadcrumbs_list col-lg-3">
                         <a href="./index.html" class="breadcrumb__link breadcrumb__link-prev">HOME</a>
                         <span class="divider">/</span>
                         <a href="" class="breadcrumb__link breadcrumb__link-current">SHOP</a>
                     </nav>
-                    <input type="text" class="main-sPage-search">
-                    <div class="main-sPage__header-sort d-flex align-items-center">
+                    <input type="text" class="main-sPage-searc col-2">
+                    <div class="col-7 main-sPage__header-sort d-flex align-items-center justify-content-end">
                         <span class="main-sPage__header-sort-label">Showing 1–12 of 72 results</span>
                         <form action="" >
                             <select class="form-control control-sort">
@@ -331,9 +332,10 @@
                         </form>
                     </div>
                 </div>
-                <div class="row main-sPage__content">
+                <div class="col-12 main-sPage__content">
+                  <div class="row">
                     <!-- Category -->
-                    <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block d-md-none main-sPage__content-category">
+                    <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block d-none d-sm-none main-sPage__content-category">
                         <ul class="category-list">
                             <li class="category-item">
                                 <a href="#" class="category-item-link">
@@ -411,7 +413,7 @@
                     <!-- Product -->
                     <div class="col-xl-9 col-lg-9 col-md-12 col sPage__content-product">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                                 <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                                 <div class="sPage__content-product-desc">
                                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -425,7 +427,7 @@
                                       Quick view
                                   </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                            <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                               <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                               <div class="sPage__content-product-desc">
                                   <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -439,7 +441,7 @@
                                     Quick view
                                 </div>
                           </div>
-                          <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                          <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                             <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                             <div class="sPage__content-product-desc">
                                 <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -453,7 +455,7 @@
                                   Quick view
                               </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                        <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                           <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                           <div class="sPage__content-product-desc">
                               <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -467,7 +469,7 @@
                                 Quick view
                             </div>
                       </div>
-                      <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                      <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                         <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                         <div class="sPage__content-product-desc">
                             <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -481,7 +483,7 @@
                               Quick view
                           </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                    <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                       <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                       <div class="sPage__content-product-desc">
                           <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -495,7 +497,7 @@
                             Quick view
                         </div>
                   </div>
-                  <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                  <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                     <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                     <div class="sPage__content-product-desc">
                         <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -509,7 +511,7 @@
                           Quick view
                       </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+                <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                   <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                   <div class="sPage__content-product-desc">
                       <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -523,7 +525,7 @@
                         Quick view
                     </div>
               </div>
-              <div class="col-xl-4 col-lg-4 col-md-4 sPage__content-product-item">
+              <div class="col-xl-4 col-lg-4 col-4 col-md-4 sPage__content-product-item">
                 <img src="./homePage/img/main_product-2.jpg" alt="" class="sPage__content-product-img">
                 <div class="sPage__content-product-desc">
                     <span class="sPage__content-product-name">13 Long Sleeve</span>
@@ -557,12 +559,14 @@
                             </ul>
                         </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
         </main>
 
         <!-- footer -->
-        <footer class="footer">
+        <footer class="footer row">
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-xl-3">
