@@ -36,6 +36,7 @@
 .contain-detail__product-main{
     position: relative;
     cursor: pointer;
+    border: none !important;
 }
 .detail__product-main-img{
     width: 100% ;

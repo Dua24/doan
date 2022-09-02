@@ -34,6 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/header.js"></script>
     <title>Home Pageeee</title>
   </head>
   <body>
@@ -72,7 +73,7 @@
                     <i class="fa-solid fa-bars"></i>
                     <!-- MODAL MENU -->
                         <!-- class "menu" for modal-layout -->
-                        <!-- <div class="modal-layout">
+                        <div class="modal-layout modal-layout-menu">
                             <div class="contain-modal">
                                 <div class="modal-inner modal-inner-menu">
                                     <div class="modal-inner__search">
@@ -83,16 +84,16 @@
                                     </div>
                                     <ul class="modal-inner__list">
                                         <li class="modal-inner__item">
-                                            <a href="" class="modal-inner__item-link">search page</a>
+                                            <a href="./searchPage.html" class="modal-inner__item-link">search page</a>
                                         </li>
                                         <li class="modal-inner__item">
-                                            <a href="" class="modal-inner__item-link">detail page</a>
+                                            <a href="./detailPage.html" class="modal-inner__item-link">detail page</a>
                                         </li>
-                                        <li class="modal-inner__item">
-                                            <a href="" class="modal-inner__item-link">login</a>
+                                        <li class="modal-inner__item login">
+                                            <a href="#" class="modal-inner__item-link">login</a>
                                         </li>
-                                        <li class="modal-inner__item">
-                                            <a href="" class="modal-inner__item-link">register</a>
+                                        <li class="modal-inner__item register">
+                                            <a href="#" class="modal-inner__item-link">register</a>
                                         </li>
                                         <li class="modal-inner__item">
                                             <a href="" class="modal-inner__item-link">
@@ -101,12 +102,12 @@
                                                 </a>
                                         </li>
                                     </ul>
-                                    <span class="modal-exit">
+                                    <span class="modal-exit menu">
                                         <i class="fa-solid fa-xmark"></i>
                                     </span>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     
                 </div>
               <div class="masthead__logo col-xl-2 col-lg-2 col-md-8 col-8">
@@ -135,8 +136,8 @@
               </ul>
               <ul class="masthead__list justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flex d-md-flex d-flex">
                 <div class="row align-items-center">
-                    <li class="masthead__item d-xl-block d-lg-block d-md-none d-none">
-                      <a href="" class="masthead__item-link"> LOGIN </a>
+                    <li class="masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none">
+                      LOGIN
                     </li>
                     <li class="header-divider d-xl-block d-lg-block d-md-none d-none"></li>
                     <li class="masthead__item header-cart d-xl-block d-lg-block d-md-block d-block">
@@ -529,7 +530,7 @@
                   class="carousel-control-next d-flex justify-content-end carousel-control"
                   href="#demo"
                   data-slide="next"
-                >
+                  >
                   <span class="carousel-control-next-icon"></span>
                 </a>
               </div>
@@ -546,58 +547,70 @@
               </h2>
               <div class="row">
                 <div
-                  class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center"
+                  class="card col-xl-6 col-md-6 col-12 main__product justify-content-center align-items-center"
                 >
+                <div class="card-body">
                   <img
                     src="./homePage/img/type_img.png"
                     alt=""
                     class="main__product-img "
                   />
                 </div>
+                </div>
                 <div
-                  class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center"
+                  class="card col-xl-6 col-md-6 col-12 main__product justify-content-center align-items-center"
                 >
+                <div class="card-body">
                   <img
                     src="./homePage/img/type_img2.png"
                     alt=""
                     class="main__product-img "
                   />
                 </div>
+                </div>
                 <div
-                  class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center"
+                  class="card col-xl-6 col-md-6 col-12 main__product justify-content-center align-items-center"
                 >
+                <div class="card-body">
                   <img
                     src="./homePage/img/type_img3.png"
                     alt=""
                     class="main__product-img "
                   />
                 </div>
+                </div>
                 <div
-                  class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center"
+                  class="card col-xl-6 col-md-6 col-12 main__product justify-content-center align-items-center"
                 >
+                <div class="card-body">
                   <img
                     src="./homePage/img/type_img4.png"
                     alt=""
                     class="main__product-img "
                   />
                 </div>
+                </div>
                 <div
-                  class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center"
+                  class="card col-xl-6 col-md-6 col-12 main__product justify-content-center align-items-center"
                 >
+                <div class="card-body">
                   <img
                     src="./homePage/img/type_img5.png"
                     alt=""
                     class="main__product-img "
                   />
                 </div>
+                </div>
                 <div
-                  class="col-xl-6 col-md-6 col-12 main__product d-flex justify-content-center align-items-center"
+                  class="card col-xl-6 col-md-6 col-12 main__product justify-content-center align-items-center"
                 >
+                <div class="card-body">
                   <img
                     src="./homePage/img/type_img6.png"
                     alt=""
                     class="main__product-img "
                   />
+                </div>
                 </div>
               </div>
             </div>
@@ -612,20 +625,26 @@
                 <b></b>
               </h2>
               <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 main__subProduct">
-                  <img src="./public/img/masthead_logo.jpg" alt="" />
+                <div class="card col-xl-4 col-lg-4 col-md-4 main__subProduct">
+                  <div class="card-body">
+                    <img src="./public/img/masthead_logo.jpg" alt="" />
+                  </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 main__subProduct">
-                  <img
-                    src="./homePage/img/main_subProduct.jpg"
-                    alt=""
-                  />
+                <div class="card col-xl-4 col-lg-4 col-md-4 main__subProduct">
+                  <div class="card-body">
+                    <img
+                      src="./homePage/img/main_subProduct.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 main__subProduct">
-                  <img
-                    src="./homePage/img/life-style__img.jpg"
-                    alt=""
-                  />
+                <div class="card col-xl-4 col-lg-4 col-md-4 main__subProduct">
+                  <div class="card-body">
+                    <img
+                      src="./homePage/img/life-style__img.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -674,7 +693,7 @@
 
     <!-- MODAL_LOGIN -->
             <!-- add class "login" for modal-layout -->
-            <div class="modal-layout">
+            <div class="modal-layout modal-layout-login">
                 <div class="contain-modal">
                     <div class="modal-inner modal-inner-login">
                         <h2 class="modal-heading modal-heading__login">Login</h2>
@@ -694,10 +713,39 @@
                             <button type="submit" class="btn btn__primary">Log in</button>
                             <span class="lost-pw">Lost your password?</span>
                         </form>
+                        <span class="modal-exit">
+                          <i class="fa-solid fa-xmark"></i>
+                      </span>
                     </div>
                 </div>
             </div>
-      
-    </div> 
+    <!-- MODAL_register -->
+            <!-- add class "register" for modal-layout -->
+            <div class="modal-layout modal-layout-register">
+              <div class="contain-modal">
+                  <div class="modal-inner modal-inner-register">
+                      <h2 class="modal-heading modal-heading__register">register</h2>
+                      <form>
+                          <div class="form-group form-group__wrapper">
+                          <label for="exampleInputEmail2">Username or email address </label>
+                          <input type="email" class="form-control" id="exampleInputEmail2"  placeholder="Enter email">
+                          </div>
+                          <div class="form-group form-group__wrapper">
+                          <label for="exampleInputPassword2">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                          </div>
+                          <div class="form-group form-group__wrapper">
+                            <label for="exampleInputPassword3">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                          <button type="submit" class="btn btn__primary">Register</button>
+                      </form>
+                      <span class="modal-exit">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+              </div>
+          </div>
+      </div> 
   </body>
 </html>

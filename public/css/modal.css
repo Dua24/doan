@@ -6,7 +6,6 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.4);
-    display: flex;
     align-items: center;
     justify-content: center;
     animation: fadeIn linear 0.2s;
@@ -16,18 +15,39 @@
 .modal-layout.menu{
     display:block
 }
+
+.modal-layout.filter{
+    display:block
+}
 .modal-layout.login{
     display:flex
 }
 /* modal-login */
 
-.modal-layout.login .modal-inner-login{
+.modal-layout .modal-inner-login{
     padding: 30px 20px;
-    min-width: 900px;
     background-color: var(--white-color);
 }
-.contain-modal{
+.modal-layout-login .contain-modal{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 20px;
 }
+.modal-layout.register{
+    display:flex
+}
+/* modal-register */
+
+.modal-layout .modal-inner-register{
+    padding: 30px 20px;
+    background-color: var(--white-color);
+}
+.modal-layout-register .contain-modal{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 20px;
+}
+
 .modal-heading{
     font-size: 2.4rem;
     color: #555;
@@ -91,8 +111,29 @@
     cursor: pointer;
     text-decoration: none;
 }
+.modal-inner-login{
+    position: relative;
+}
+.moda-inner-login-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 27px;
+    font-size: 3rem;
+}
 
+.modal-inner-register{
+    position: relative;
+}
+.moda-inner-register-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 27px;
+    font-size: 3rem;
+}
 /* modal menu */
+.modal-layout .modal-inner-filter,
 .modal-layout .modal-inner-menu{
     width: 260px;
     position:fixed;
@@ -100,13 +141,15 @@
     left: 0;
     bottom: 0;
     background-color: var(--white-color);
-    transform: translateX(-260px);
-    transition: all linear 0.5s;
+    animation: moveRight linear 0.25s;
+    padding: 10px;
 }
+/* .modal-layout.filter .modal-inner,
 .modal-layout.menu .modal-inner{
     transform: translateX(0);
     transition: all linear 0.5s;
-}
+} */
+
 .modal-inner__search-input {
     width: 100%;
     border-radius: 0px;
@@ -170,6 +213,7 @@
     padding: 10px 20px;
     top: 0;
     right: 0;
+    font-size: 2rem;
 }
 .modal-exit:hover{
     color: #0a0a0a !important;
@@ -236,3 +280,23 @@
     padding-bottom: 100px;
 }
 
+/* filter modal */
+
+
+.menu-exit{
+    position: absolute;
+    top:0;
+    right: 15px;
+    padding: 20px;
+}
+
+@keyframes moveRight{
+    from{
+        transform: translateX(-260px);
+        opacity: 0
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1
+    }
+}

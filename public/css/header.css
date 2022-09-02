@@ -88,9 +88,6 @@
 }
 .masthead__item{
     position: relative;
-}
-.masthead__item-link{
-    text-decoration: none;
     color: var(--black-color);
     font-size: 1.4rem;
     font-weight: 600;
@@ -99,6 +96,17 @@
     padding: 12px 0;
     align-items: center;
     cursor: pointer;
+}
+.masthead__item-link{
+    color: var(--black-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4rem;
+    display:flex;
+    padding: 12px 0;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
 
 }
 .masthead__item:first-child{
@@ -221,7 +229,7 @@
 }
 .cart-item__delete{
     color: #666;
-    padding: 2px 10px;
+    padding: 7px 10px;
     border: 2px solid #999;
     display: flex;
     align-items: center;
