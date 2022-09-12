@@ -64,6 +64,7 @@ window.onload = function() {
     
         
     window.addEventListener("resize", function(event) {
+        const form_control = this.document.querySelector(".main-sPage__header-sort")
         const header_label = document.querySelector(".header__top-label")
         const headerCartTitle = document.querySelector(".header-cart__title")
         const mastheadLogo = document.querySelector(".masthead__logo")
@@ -89,6 +90,7 @@ window.onload = function() {
             header_label.style.textAlign="left"
             mastheadLogo.style.textAlign="left"
             headerCartTitle.style.display="block"
+            form_control.style.justifyContent="right"
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="left"
             }
