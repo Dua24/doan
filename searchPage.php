@@ -461,31 +461,11 @@
                     </div>
                     <!-- Product -->
                     <div class="col-xl-9 col-lg-9 col-md-12 col sPage__content-product">
-                        <div class="row">
-                            <!-- product -->
-                            <?php
-                              include 'product.php';
+                        <!-- product -->
+                        <?php
+                              include 'pagination.php';
                             ?>
-                            
-                            
-                        </div>
-                        <div class="row d-flex align-items-center justify-content-center">
-                            <!-- Pagination -->
-                            <ul class="pagination sPage-pagination">
-                                <li class="page-item"><a class="page-link" href="#">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </a></li>
-                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                <li class="page-item"><a class="page-link" href="#">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                   </div>
                 </div>

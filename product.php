@@ -6,6 +6,9 @@ include_once "category.php";
 $link = null;
 taoKetNoi($link);
 
+
+
+
 //category and search input
 if(isset($_GET['dm'])){
     $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham where ten_sp like '%".$_GET['dm']."%'");
@@ -13,6 +16,10 @@ if(isset($_GET['dm'])){
 else {
     $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham");
 }
+
+
+
+
 
 // select sort
 if(isset($_GET['sort'])){
@@ -23,6 +30,9 @@ else if(!isset($_GET['dm'])) {
 }
 
 
+
+
+echo "<div class='row'>";
 while ($rows = mysqli_fetch_object($result)) {
     echo "
         <div class='card  col-xl-4 col-lg-4 col-6 col-md-4 sPage__content-product-item'>
@@ -41,3 +51,4 @@ while ($rows = mysqli_fetch_object($result)) {
     </div>
     ";
 }
+echo "</div>";
