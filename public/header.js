@@ -90,7 +90,9 @@ window.onload = function() {
             header_label.style.textAlign="left"
             mastheadLogo.style.textAlign="left"
             headerCartTitle.style.display="block"
-            form_control.style.justifyContent="right"
+            if(form_control) {
+                form_control.style.justifyContent="right"
+            }
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="left"
             }

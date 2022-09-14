@@ -404,14 +404,16 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 row main-sPage__header d-flex align-items-center  justify-content-center">
-                    <nav class="breadcrumbs_list col-lg-3 col-12">
+                    <nav class="breadcrumbs_list col-lg-4 col-12">
                         <a href="./index.php" class="breadcrumb__link breadcrumb__link-prev">HOME</a>
                         <span class="divider">/</span>
-                        <a href="?dm=" class="breadcrumb__link breadcrumb__link-current">SHOP</a>
+                        <?php
+                          include 'breadcrumb.php';
+                        ?>
                     </nav>
                     <!-- search input -->
-                    <form style="height:30px; font-size:15px" class="col-lg-4 d-lg-flex d-none" action="">
-                      <input type="text" class="main-sPage-searc" name="dm">
+                    <form style="height:30px; font-size:15px" class="col-lg-3 d-lg-flex d-none" action="">
+                      <input type="text" class="main-sPage-searc" name="search">
                       <input style ="background-color:#000; color:#fff; border-radius:none; font-weight:600; margin-left:2px" type="submit" value="Tìm kiếm">
                     </form>
                     <div class="menu-filter-mobile d-lg-none d-block">
@@ -439,7 +441,7 @@
                     <div class="row col-lg-5 col-12 main-sPage__header-sort">
                         <form action="" method="get" >
                             <select onchange = "this.form.submit()" class="form-control control-sort" name="sort">
-                                <option>Default select</option>
+                                <option value="">Default select</option>
                                 <option value="DESC">Sort by price: desc</option>
                                 <option value = "ASC">Sort by price: asce</option>
                                 
@@ -463,7 +465,7 @@
                     <div class="col-xl-9 col-lg-9 col-md-12 col sPage__content-product">
                         <!-- product -->
                         <?php
-                              include 'pagination.php';
+                              include 'product.php';
                             ?>
                         
                     </div>

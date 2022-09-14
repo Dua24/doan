@@ -2,36 +2,27 @@
 include_once "db_module.php";
 include_once "category.php";
 
-
 $link = null;
 taoKetNoi($link);
 
+// pagination render
+include "pagination_render.php";
 
 
+// category render 
+include "category_render.php";
 
-//category and search input
-if(isset($_GET['dm'])){
-    $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham where ten_sp like '%".$_GET['dm']."%'");
+// searchInput render
+include "searchInput_render.php";
+// sort render
+include "sort_render.php";
+
+if(!isset($_GET['page']) && !isset($_GET['search']) && !isset($_GET['sort']) && !isset($_GET['dm'])) {
+    $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham limit ".$from.", ".$num_on_page);
 } 
-else {
-    $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham");
-}
 
 
-
-
-
-// select sort
-if(isset($_GET['sort'])){
-    $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham order by gia_sp ".$_GET['sort']."");
-} 
-else if(!isset($_GET['dm'])) {
-    $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham");
-}
-
-
-
-
+// Chung
 echo "<div class='row'>";
 while ($rows = mysqli_fetch_object($result)) {
     echo "
@@ -52,3 +43,6 @@ while ($rows = mysqli_fetch_object($result)) {
     ";
 }
 echo "</div>";
+
+// pagination logic
+include "pagination_logic.php";
