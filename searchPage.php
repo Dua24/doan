@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/css/base.css">
     <link rel="stylesheet" href="./public/css/modal.css">
     <link rel="stylesheet" href="./public/css/category.css">
+    <link rel="stylesheet" href="./public/css/detail_product.css">
     <link rel="stylesheet" href="./searchPage/css/searchPage.css">
     <link rel="stylesheet" href="./public/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="./public/fonts/themify-icons/themify-icons.css">
@@ -24,6 +25,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./public/header.js"></script>
+    
     <title>Search Page</title>
 </head>
 <body>
@@ -131,7 +133,7 @@
                     <li class="header-divider d-xl-block d-lg-block d-md-none d-none"></li>
                     <li class="masthead__item header-cart d-xl-block d-lg-block d-md-block d-block">
                       <div class="masthead__item-link">
-                        <span class="header-cart__title">
+                        <span class="header-cart__title d-lg-block d-none">
                           CART /
                           <span class="header-cart_price"> 0 </span>
                           <span class="header-cart__symbol">₫</span>
@@ -412,7 +414,7 @@
                         ?>
                     </nav>
                     <!-- search input -->
-                    <form style="height:30px; font-size:15px" class="col-lg-3 d-lg-flex d-none" action="">
+                    <form style="height:30px; font-size:15px" class="col-lg-4 d-lg-flex d-none" action="">
                       <input type="text" class="main-sPage-searc" name="search">
                       <input style ="background-color:#000; color:#fff; border-radius:none; font-weight:600; margin-left:2px" type="submit" value="Tìm kiếm">
                     </form>
@@ -438,12 +440,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row col-lg-5 col-12 main-sPage__header-sort">
+                    <div class="row col-lg-4 col-12 main-sPage__header-sort">
                         <form action="" method="get" >
                             <select onchange = "this.form.submit()" class="form-control control-sort" name="sort">
                                 <option value="">Default select</option>
-                                <option value="DESC">Sort by price: desc</option>
-                                <option value = "ASC">Sort by price: asce</option>
+                                <option value="desc">Sort by price: desc</option>
+                                <option value = "asc">Sort by price: asce</option>
                                 
                             </select>
                         </form>
@@ -467,6 +469,7 @@
                         <?php
                               include 'product.php';
                             ?>
+                        
                         
                     </div>
                   </div>
@@ -542,33 +545,107 @@
                   </div>
               </div>
           </div>
-  <!-- MODAL_register -->
-          <!-- add class "register" for modal-layout -->
-          <div class="modal-layout modal-layout-register">
-            <div class="contain-modal">
-                <div class="modal-inner modal-inner-register">
-                    <h2 class="modal-heading modal-heading__register">register</h2>
-                    <form>
-                        <div class="form-group form-group__wrapper">
-                        <label for="exampleInputEmail2">Username or email address </label>
-                        <input type="email" class="form-control" id="exampleInputEmail2"  placeholder="Enter email">
-                        </div>
-                        <div class="form-group form-group__wrapper">
-                        <label for="exampleInputPassword2">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                        </div>
-                        <div class="form-group form-group__wrapper">
-                          <label for="exampleInputPassword3">Confirm Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+            <!-- MODAL_register -->
+            <!-- add class "register" for modal-layout -->
+            <div class="modal-layout modal-layout-register">
+              <div class="contain-modal">
+                  <div class="modal-inner modal-inner-register">
+                      <h2 class="modal-heading modal-heading__register">register</h2>
+                      <form>
+                          <div class="form-group form-group__wrapper">
+                          <label for="exampleInputEmail2">Username or email address </label>
+                          <input type="email" class="form-control" id="exampleInputEmail2"  placeholder="Enter email">
                           </div>
-                        <button type="submit" class="btn btn__primary">Register</button>
-                    </form>
-                    <span class="modal-exit">
-                      <i class="fa-solid fa-xmark"></i>
-                  </span>
-                </div>
+                          <div class="form-group form-group__wrapper">
+                          <label for="exampleInputPassword2">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                          </div>
+                          <div class="form-group form-group__wrapper">
+                            <label for="exampleInputPassword3">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                          <button type="submit" class="btn btn__primary">Register</button>
+                      </form>
+                      <span class="modal-exit">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+              </div>
+          </div>
+          <!-- MODAL QUick view -->
+          <div class="modal-layout modal-layout-quickview">
+              <div class="contain-modal">
+                  <div class="modal-inner modal-inner-quickview">
+                    <div class="contain-detail__product">
+                    <div class="row">
+                      <div class="col-lg-6 col-12">
+                        <div class="contain-detail__product-main">
+                            <div class="control-detail__img-product">
+                              <div>
+                                <img src="./detailPage/img/detail_img-product.jpg" alt="" class="detail__product-main-img w-100">
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12 row" style ="margin-top:50px">
+                      <div class="detail__product-specific col-12" style="padding-bottom:0px">
+                        <h1 class="detail__product-name">2020 Travel Jacket</h1>
+                        <span class="h-divider"></span>
+                        <div class="detail__product-contain-price">
+                          <span class="detail__product-price">550.000</span>
+                          <span class="detail__product-symbolP">₫</span>
+                        </div>
+                        <form action="" class="form-cart">
+                          <div class="form-cart__contain-size">
+                            <label for="" class="form-cart__size-label">Size</label>
+                            <ul class="form-cart__size-list">
+                              <li class="form-cart__size-item ">
+                                <span class="form-cart__size-text ">L</span>
+                              </li>
+                              <li class="form-cart__size-item">
+                                <span class="form-cart__size-text">M</span>
+                              </li>
+                              <li class="form-cart__size-item">
+                                <span class="form-cart__size-text">XL</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="form-cart__contain-add">
+                              <div class="form-cart__control-quantity">
+                                <span class="quantity-control quantity-control__minus">
+                                  <span>-</span>
+                                </span>
+                                <input type="text" class="control-quantity__current" value = "1">
+                                <span class="quantity-control quantity-control__plus">
+                                  <span>+</span>
+                                </span>
+                              </div>
+                              <button type="button" class="btn btn__add-cart">ADD TO CART</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="detail__product-meta col-12" style="font-size:1.3rem">
+                        <span class="sku-wrapper d-block" style ="color: #777;
+                                                                  display: block;
+                                                                  border-bottom: 1px dotted #d6d6d6c7;
+                                                                  padding: 6px 0;">
+                          SKU: 
+                          <span class="sku">N/A</span>
+                        </span>
+                        <span class="posted-in">
+                          Category:
+                          <a href="">Jacket</a>
+                        </span>
+                      </div>
+                  </div>
+              </div>
             </div>
-        </div>
+                  <span class="modal-exit">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+            </div>
+              </div>
+          </div>
            
         
     </div>

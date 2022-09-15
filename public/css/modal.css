@@ -22,6 +22,9 @@
 .modal-layout.login{
     display:flex
 }
+.modal-layout.quickview{
+    display:flex;
+}
 /* modal-login */
 
 .modal-layout .modal-inner-login{
@@ -47,7 +50,15 @@
     width: 100%;
     margin: 0 20px;
 }
-
+/* modal-quickview */
+.modal-layout .modal-inner-quickview{
+    background-color: var(--white-color);
+}
+.modal-layout-quickview .contain-modal{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 20px;
+}
 .modal-heading{
     font-size: 2.4rem;
     color: #555;
@@ -126,6 +137,16 @@
     position: relative;
 }
 .moda-inner-register-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 27px;
+    font-size: 3rem;
+}
+.modal-inner-quickview{
+    position: relative;
+}
+.moda-inner-quickview-close{
     position: absolute;
     top: 0;
     right: 0;
@@ -214,6 +235,7 @@
     top: 0;
     right: 0;
     font-size: 2rem;
+    cursor: pointer;
 }
 .modal-exit:hover{
     color: #0a0a0a !important;

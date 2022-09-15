@@ -2,6 +2,30 @@ window.onload = function() {
     const loginBtn = document.querySelector(".masthead__item-login")
     const loginInMenu = document.querySelector(".modal-inner__item.login")
     const registerInMenu = document.querySelector(".modal-inner__item.register")
+    const quickViewBtn = document.getElementsByClassName("product-quickview")
+    
+
+    // handle click size changes
+    ;(function() {
+        const size = document.querySelectorAll(".form-cart__size-item");
+        for(let i=0;i<size.length;i++) {
+            size[i].onclick = function() {
+                removeActive(i)
+                size[i].classList.add("active")
+            }
+        }
+        function removeActive() {
+            for(let i=0;i<size.length;i++) {
+                size[i].classList.remove("active")
+            }
+        }
+    })()
+    // show quickview
+    for(let i=0;i<quickViewBtn.length;i++) {
+        quickViewBtn[i].onclick = function() {
+            showModal("quickview")
+        }
+    }
     function showModal(type) {
         const modalLayout = document.querySelector(`.modal-layout.modal-layout-${type}`)
         const modalInner = document.querySelector(`.modal-inner-${type}`)
@@ -18,7 +42,7 @@ window.onload = function() {
         modalInner.onclick = function(e) {
             e.stopPropagation()
         }
-    }
+}        
     loginBtn.onclick = function() {
         showModal("login")
     }
@@ -28,7 +52,24 @@ window.onload = function() {
     registerInMenu.onclick = function() {
         showModal("register")
     }
-   
+    
+    // Handle quantity
+    ;(function() {
+        const minusBtn =document.querySelector(".quantity-control__minus");
+        const plusBtn =document.querySelector(".quantity-control__plus");
+        const quanity_inProduct =document.querySelector(".control-quantity__current");
+        if(minusBtn) {
+            minusBtn.onclick = function() {
+                if (quanity_inProduct.value > 1) {
+                    quanity_inProduct.value--
+                }
+            }
+            plusBtn.onclick = function() {
+                quanity_inProduct.value++
+            }
+        }
+    })()
+
     
     // Handle menu in < pc
     const menuBtn = document.querySelector(".menu-in_md")
@@ -51,16 +92,18 @@ window.onload = function() {
             e.stopPropagation()
         }
     }
-    menuBtn.onclick = function() {
-        openTypeMenu("menu")
+    if(menuBtn) {
+        menuBtn.onclick = function() {
+            openTypeMenu("menu")
+        }
+        
     }
-    if(filterBtn){
+    if(filterBtn) {
         filterBtn.onclick = function() {
             openTypeMenu("filter")
             
         }
     }
-
     
         
     window.addEventListener("resize", function(event) {
@@ -99,20 +142,30 @@ window.onload = function() {
 
         }
     })
-    if(window.innerWidth<=992) {
-        const mastheadLogo = document.querySelector(".masthead__logo")
-        const header_label = document.querySelector(".header__top-label")
-        header_label.style.textAlign="center"
-        const headerCartTitle = document.querySelector(".header-cart__title")
-        const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
-        const breadcrumbsList = document.querySelector(".breadcrumbs_list")
-            mastheadLogo.style.textAlign="center"
-            headerCartTitle.style.display="none"
-            if(mainHeaderSort){
-                mainHeaderSort.style.justifyContent="center"
-            }
+    ;(function() {
+        if(window.innerWidth<=992) {
+            const mastheadLogo = document.querySelector(".masthead__logo")
+            const header_label = document.querySelector(".header__top-label")
+            const headerCartTitle = document.querySelector(".header-cart__title")
+            const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
+            const breadcrumbsList = document.querySelector(".breadcrumbs_list")
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="center"
             }
-    }
+            if(header_label) {
+                header_label.style.textAlign="center"
+            }
+            
+            if(mastheadLogo) {
+                mastheadLogo.style.textAlign="center"
+            }
+            if(headerCartTitle) {
+                headerCartTitle.style.display="none"
+            }
+            if(mainHeaderSort){
+                mainHeaderSort.style.justifyContent="center"
+            }
+        }
+    })()
+
 }

@@ -44,5 +44,14 @@ while ($rows = mysqli_fetch_object($result)) {
 }
 echo "</div>";
 
-// pagination logic
-include "pagination_logic.php";
+if(isset($slg)) {
+    if(mysqli_fetch_row($slg)[0]<=12){
+    }
+} else {
+        // pagination logic
+    include "pagination_logic.php";
+
+}
+
+
+giaiPhongBoNho($link,$result);

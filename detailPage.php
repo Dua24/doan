@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/css/base.css" />
     <link rel="stylesheet" href="./public/css/category.css" />
     <link rel="stylesheet" href="./public/css/modal.css">
+    <link rel="stylesheet" href="./public/css/detail_product.css">
     <link rel="stylesheet" href="./detailPage/css/detailPage.css" />
     <link
       rel="stylesheet"

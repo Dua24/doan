@@ -142,7 +142,7 @@
                     <li class="header-divider d-xl-block d-lg-block d-md-none d-none"></li>
                     <li class="masthead__item header-cart d-xl-block d-lg-block d-md-block d-block">
                       <div class="masthead__item-link">
-                        <span class="header-cart__title">
+                        <span class="header-cart__title d-lg-block d-none">
                           CART /
                           <span class="header-cart_price"> 0 </span>
                           <span class="header-cart__symbol">₫</span>

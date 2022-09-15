@@ -12,3 +12,5 @@ while ($rows = mysqli_fetch_object($result)) {
         </li>
         ";
 }
+
+giaiPhongBoNho($link, $result);
