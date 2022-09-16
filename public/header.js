@@ -113,6 +113,8 @@ window.onload = function() {
         const mastheadLogo = document.querySelector(".masthead__logo")
         const breadcrumbsList = document.querySelector(".breadcrumbs_list")
         const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
+        const imgdetailProduct = this.document.querySelector(".control-detail__img-product")
+        const quickviewBtn = this.document.getElementsByClassName("product-quickview")
         if(document.body.clientWidth<=992) {
             const header_label = document.querySelector(".header__top-label")
             header_label.style.textAlign="center"
@@ -124,7 +126,10 @@ window.onload = function() {
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="center"
             }
-
+            imgdetailProduct.style.justifyContent="center"
+            for(let i=0;i<quickViewBtn.length;i++) {
+                quickviewBtn[i].style.display = "none"
+            }
 
 
             
@@ -139,6 +144,9 @@ window.onload = function() {
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="left"
             }
+            for(let i=0;i<quickViewBtn.length;i++) {
+                quickviewBtn[i].style.display = "flex"
+            }
 
         }
     })
@@ -149,6 +157,8 @@ window.onload = function() {
             const headerCartTitle = document.querySelector(".header-cart__title")
             const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
             const breadcrumbsList = document.querySelector(".breadcrumbs_list")
+            const imgdetailProduct = this.document.querySelector(".control-detail__img-product")
+            const quickviewBtn = this.document.getElementsByClassName("product-quickview")
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="center"
             }
@@ -165,6 +175,12 @@ window.onload = function() {
             if(mainHeaderSort){
                 mainHeaderSort.style.justifyContent="center"
             }
+            for(let i=0;i<quickViewBtn.length;i++) {
+                quickviewBtn[i].style.display = "none"
+            }
+
+            imgdetailProduct.style.justifyContent="center"
+
         }
     })()
 
