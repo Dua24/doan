@@ -75,6 +75,7 @@
     background-color: transparent;
     border: none;
     position: relative !important;
+    text-decoration: none;
 }
 .sPage__content-product-img{
     position: relative;
@@ -118,6 +119,7 @@
     transition: bottom linear 0.3s;
 
 }
+
 /* Pagination */
 .sPage-pagination li a{
     font-size: 2rem;

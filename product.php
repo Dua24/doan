@@ -26,7 +26,7 @@ if(!isset($_GET['page']) && !isset($_GET['search']) && !isset($_GET['sort']) && 
 echo "<div class='row'>";
 while ($rows = mysqli_fetch_object($result)) {
     echo "
-        <div class='card  col-xl-4 col-lg-4 col-6 col-md-4 sPage__content-product-item'>
+        <a href='detailPage.php' class='card  col-xl-4 col-lg-4 col-6 col-md-4 sPage__content-product-item'>
         <img src='$rows->img_sp' alt='' class='sPage__content-product-img'>
         <div class='sPage__content-product-desc'>
             <span class='sPage__content-product-name'>$rows->ten_sp</span>
@@ -39,7 +39,7 @@ while ($rows = mysqli_fetch_object($result)) {
             <div class='product-quickview'>
                 Quick view
             </div>
-    </div>
+    </a>
     ";
 }
 echo "</div>";
