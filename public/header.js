@@ -2,7 +2,6 @@ window.onload = function() {
     const loginBtn = document.querySelector(".masthead__item-login")
     const loginInMenu = document.querySelector(".modal-inner__item.login")
     const registerInMenu = document.querySelector(".modal-inner__item.register")
-    const quickViewBtn = document.getElementsByClassName("product-quickview")
     
 
     // handle click size changes
@@ -20,27 +19,27 @@ window.onload = function() {
             }
         }
     })()
-    // show quickview
-    for(let i=0;i<quickViewBtn.length;i++) {
-        quickViewBtn[i].onclick = function() {
-            showModal("quickview")
-        }
-    }
+   
     function showModal(type) {
         const modalLayout = document.querySelector(`.modal-layout.modal-layout-${type}`)
         const modalInner = document.querySelector(`.modal-inner-${type}`)
-        modalLayout.classList.add(`${type}`)
+        console.log(modalLayout)
+        if(modalLayout) {
+            modalLayout.classList.add(`${type}`)
+            modalLayout.onclick = function() {
+                modalLayout.classList.remove(`${type}`)
+            }
+        }
         const modalExit = document.querySelectorAll(`.modal-exit`)
         for(let i=0;i<modalExit.length;i++) {
             modalExit[i].onclick = function() {
                 modalLayout.classList.remove(`${type}`)
             }
         }
-        modalLayout.onclick = function() {
-            modalLayout.classList.remove(`${type}`)
-        }
-        modalInner.onclick = function(e) {
-            e.stopPropagation()
+        if(modalInner) {
+            modalInner.onclick = function(e) {
+                e.stopPropagation()
+            }
         }
 }        
     loginBtn.onclick = function() {
@@ -114,7 +113,6 @@ window.onload = function() {
         const breadcrumbsList = document.querySelector(".breadcrumbs_list")
         const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
         const imgdetailProduct = this.document.querySelector(".control-detail__img-product")
-        const quickviewBtn = this.document.getElementsByClassName("product-quickview")
         if(document.body.clientWidth<=992) {
             const header_label = document.querySelector(".header__top-label")
             header_label.style.textAlign="center"
@@ -126,10 +124,9 @@ window.onload = function() {
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="center"
             }
+            if(imgdetailProduct)
             imgdetailProduct.style.justifyContent="center"
-            for(let i=0;i<quickViewBtn.length;i++) {
-                quickviewBtn[i].style.display = "none"
-            }
+          
 
 
             
@@ -144,9 +141,7 @@ window.onload = function() {
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="left"
             }
-            for(let i=0;i<quickViewBtn.length;i++) {
-                quickviewBtn[i].style.display = "flex"
-            }
+           
 
         }
     })
@@ -158,7 +153,6 @@ window.onload = function() {
             const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
             const breadcrumbsList = document.querySelector(".breadcrumbs_list")
             const imgdetailProduct = this.document.querySelector(".control-detail__img-product")
-            const quickviewBtn = this.document.getElementsByClassName("product-quickview")
             if(breadcrumbsList) {
                 breadcrumbsList.style.textAlign="center"
             }
@@ -175,10 +169,7 @@ window.onload = function() {
             if(mainHeaderSort){
                 mainHeaderSort.style.justifyContent="center"
             }
-            for(let i=0;i<quickViewBtn.length;i++) {
-                quickviewBtn[i].style.display = "none"
-            }
-
+            if(imgdetailProduct)
             imgdetailProduct.style.justifyContent="center"
 
         }

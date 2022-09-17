@@ -86,9 +86,6 @@
                                         <li class="modal-inner__item">
                                             <a href="./searchPage.php" class="modal-inner__item-link">search page</a>
                                         </li>
-                                        <li class="modal-inner__item">
-                                            <a href="./detailPage.php" class="modal-inner__item-link">detail page</a>
-                                        </li>
                                         <li class="modal-inner__item login">
                                             <a href="#" class="modal-inner__item-link">login</a>
                                         </li>
@@ -124,13 +121,6 @@
                     href="./searchPage.php"
                     class="masthead__item-link"
                     >SEARCH PAGE</a
-                  >
-                </li>
-                <li class="masthead__item">
-                  <a
-                    href="./detailPage.php"
-                    class="masthead__item-link"
-                    >DETAIL PAGE</a
                   >
                 </li>
               </ul>

@@ -67,18 +67,15 @@
                         <div class="modal-layout modal-layout-menu">
                           <div class="contain-modal">
                               <div class="modal-inner modal-inner-menu">
-                                  <div class="modal-inner__search">
-                                      <input type="text" class="modal-inner__search-input">
+                                  <form action="" class="modal-inner__search">
+                                      <input type="text" class="modal-inner__search-input" name ="search">
                                       <button class="btn btn__primary">
                                           <i class="fa-solid fa-magnifying-glass"></i>
                                       </button>
-                                  </div>
+                                  </form>
                                   <ul class="modal-inner__list">
                                       <li class="modal-inner__item">
                                           <a href="./searchPage.php" class="modal-inner__item-link">search page</a>
-                                      </li>
-                                      <li class="modal-inner__item">
-                                          <a href="./detailPage.php" class="modal-inner__item-link">detail page</a>
                                       </li>
                                       <li class="modal-inner__item login">
                                           <a href="#" class="modal-inner__item-link">login</a>
@@ -117,13 +114,7 @@
                     >HOME PAGE</a
                   >
                 </li>
-                <li class="masthead__item">
-                  <a
-                    href="./detailPage.php"
-                    class="masthead__item-link"
-                    >DETAIL PAGE</a
-                  >
-                </li>
+               
               </ul>
               <ul class="masthead__list justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flex d-md-flex d-flex">
                 <div class="row align-items-center">
@@ -573,79 +564,7 @@
               </div>
           </div>
           <!-- MODAL QUick view -->
-          <div class="modal-layout modal-layout-quickview">
-              <div class="contain-modal">
-                  <div class="modal-inner modal-inner-quickview">
-                    <div class="contain-detail__product">
-                    <div class="row">
-                      <div class="col-lg-6 col-12">
-                        <div class="contain-detail__product-main">
-                            <div class="control-detail__img-product">
-                              <div>
-                                <img src="./detailPage/img/detail_img-product.jpg" alt="" class="detail__product-main-img w-100">
-                              </div>
-                            </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 col-12 row" style ="margin-top:50px">
-                      <div class="detail__product-specific col-12" style="padding-bottom:0px">
-                        <h1 class="detail__product-name">2020 Travel Jacket</h1>
-                        <span class="h-divider"></span>
-                        <div class="detail__product-contain-price">
-                          <span class="detail__product-price">550.000</span>
-                          <span class="detail__product-symbolP">₫</span>
-                        </div>
-                        <form action="" class="form-cart">
-                          <div class="form-cart__contain-size">
-                            <label for="" class="form-cart__size-label">Size</label>
-                            <ul class="form-cart__size-list">
-                              <li class="form-cart__size-item ">
-                                <span class="form-cart__size-text ">L</span>
-                              </li>
-                              <li class="form-cart__size-item">
-                                <span class="form-cart__size-text">M</span>
-                              </li>
-                              <li class="form-cart__size-item">
-                                <span class="form-cart__size-text">XL</span>
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="form-cart__contain-add">
-                              <div class="form-cart__control-quantity">
-                                <span class="quantity-control quantity-control__minus">
-                                  <span>-</span>
-                                </span>
-                                <input type="text" class="control-quantity__current" value = "1">
-                                <span class="quantity-control quantity-control__plus">
-                                  <span>+</span>
-                                </span>
-                              </div>
-                              <button type="button" class="btn btn__add-cart">ADD TO CART</button>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="detail__product-meta col-12" style="font-size:1.3rem">
-                        <span class="sku-wrapper d-block" style ="color: #777;
-                                                                  display: block;
-                                                                  border-bottom: 1px dotted #d6d6d6c7;
-                                                                  padding: 6px 0;">
-                          SKU: 
-                          <span class="sku">N/A</span>
-                        </span>
-                        <span class="posted-in">
-                          Category:
-                          <a href="">Jacket</a>
-                        </span>
-                      </div>
-                  </div>
-              </div>
-            </div>
-                  <span class="modal-exit">
-                    <i class="fa-solid fa-xmark"></i>
-                </span>
-            </div>
-              </div>
-          </div>
+          
            
         
     </div>
