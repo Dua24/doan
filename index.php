@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./homePage/css/style.css" />
-    <link rel="stylesheet" href="./public/css/base.css" />
-    <link rel="stylesheet" href="./public/css/header.css" />
-    <link rel="stylesheet" href="./public/css/footer.css" />
-    <link rel="stylesheet" href="./public/css/modal.css" />
+    <link rel="stylesheet" href="assets/homePage/css/style.css" />
+    <link rel="stylesheet" href="assets/public/css/base.css" />
+    <link rel="stylesheet" href="assets/public/css/header.css" />
+    <link rel="stylesheet" href="assets/public/css/footer.css" />
+    <link rel="stylesheet" href="assets/public/css/modal.css" />
     <link
       rel="stylesheet"
-      href="./public/fonts/fontawesome-free-6.1.2-web/css/all.min.css"
+      href="assets/public/fonts/fontawesome-free-6.1.2-web/css/all.min.css"
     />
     <link
       rel="stylesheet"
-      href="./public/fonts/themify-icons/themify-icons.css"
+      href="assets/public/fonts/themify-icons/themify-icons.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./public/header.js"></script>
+    <script src="assets/public/header.js"></script>
     <title>Home Pageeeee</title>
   </head>
   <body>
@@ -84,7 +84,7 @@
                                     </div>
                                     <ul class="modal-inner__list">
                                         <li class="modal-inner__item">
-                                            <a href="./searchPage.php" class="modal-inner__item-link">search page</a>
+                                            <a href="views/searchPage.php" class="modal-inner__item-link">search page</a>
                                         </li>
                                         <li class="modal-inner__item login">
                                             <a href="#" class="modal-inner__item-link">login</a>
@@ -109,16 +109,16 @@
                 </div>
               <div class="masthead__logo col-xl-2 col-lg-2 col-md-8 col-8">
                 <a
-                  href="./index.php"
+                  href="index.php"
                   class="masthead__logo-link"
                 >
-                  <img src="./public/img/masthead_logo.jpg" alt="" />
+                  <img src="assets/public/img/masthead_logo.jpg" alt="" />
                 </a>
               </div>
               <ul class="masthead__list justify-content-start col-xl-5 col-lg-5 d-xl-flex d-lg-flex d-md-none d-none">
                 <li class="masthead__item">
                   <a
-                    href="./searchPage.php"
+                    href="views/searchPage.php"
                     class="masthead__item-link"
                     >SEARCH PAGE</a
                   >
@@ -152,7 +152,7 @@
                           <ul class="cart-list">
                             <li class="cart-item">
                               <img
-                                src="./public/img/main-home-img.jpg"
+                                src="assets/public/img/main-home-img.jpg"
                                 alt=""
                                 class="cart-item__img"
                               />
@@ -179,7 +179,7 @@
                             </li>
                             <li class="cart-item">
                               <img
-                                src="./public/img/main-home-img.jpg"
+                                src="assets/public/img/main-home-img.jpg"
                                 alt=""
                                 class="cart-item__img"
                               />
@@ -206,7 +206,7 @@
                             </li>
                             <li class="cart-item">
                               <img
-                                src="./public/img/main-home-img.jpg"
+                                src="assets/public/img/main-home-img.jpg"
                                 alt=""
                                 class="cart-item__img"
                               />
@@ -233,7 +233,7 @@
                             </li>
                             <li class="cart-item">
                               <img
-                                src="./public/img/main-home-img.jpg"
+                                src="assets/public/img/main-home-img.jpg"
                                 alt=""
                                 class="cart-item__img"
                               />
@@ -260,7 +260,7 @@
                             </li>
                             <li class="cart-item">
                               <img
-                                src="./public/img/main-home-img.jpg"
+                                src="assets/public/img/main-home-img.jpg"
                                 alt=""
                                 class="cart-item__img"
                               />
@@ -318,7 +318,7 @@
                             <ul class="cart-list">
                               <li class="cart-item">
                                 <img
-                                  src="./homePage/img/"
+                                  src="assets/homePage/img/"
                                   alt=""
                                   class="cart-item__img"
                                 />
@@ -345,7 +345,7 @@
                               </li>
                               <li class="cart-item">
                                 <img
-                                  src="./homePage/img/"
+                                  src="assets/homePage/img/"
                                   alt=""
                                   class="cart-item__img"
                                 />
@@ -406,7 +406,7 @@
             <div
               class="col-xl-12 col-md-12 col-12 d-flex align-items-center justify-content-center"
             >
-              <img src="./public/img/main-home-img.jpg" alt="" class="main__img" />
+              <img src="assets/public/img/main-home-img.jpg" alt="" class="main__img" />
             </div>
           </div>
           <div class="row">
@@ -417,7 +417,7 @@
                 <b></b>
               </h2>
               <!-- slider -->
-              <div id="demo" class="carousel slide" data-ride="carousel">
+              <div id="demo" class="carousel slide" data-ride="carousel" style ="user-select:none">
                 <!-- The slideshow -->
                 <div class="carousel-inner d-flex m-auto">
                   <div class="carousel-item active">
@@ -425,25 +425,25 @@
                         <ul class="row carousel-item-list">
                           <li class="col-xl-3 col-lg-3 col-md-4 col-6 carousel-item-product">
                             <img
-                              src="./homePage/img/main_product-2.jpg"
+                              src="assets/homePage/img/main_product-2.jpg"
                               alt=""
                             />
                           </li>
                           <li class="col-xl-3 col-lg-3 col-md-4 col-6 carousel-item-product">
                             <img
-                              src="./homePage/img/main_product-3.jpg"
+                              src="assets/homePage/img/main_product-3.jpg"
                               alt=""
                             />
                           </li>
                           <li class="col-xl-3 col-lg-3 col-md-4 d-xl-block d-lg-block d-md-block d-none  carousel-item-product">
                             <img
-                              src="./homePage/img/main_product-4.jpg"
+                              src="assets/homePage/img/main_product-4.jpg"
                               alt=""
                             />
                           </li>
                           <li class="col-xl-3 col-lg-3 d-xl-block d-lg-block d-md-none d-none carousel-item-product">
                             <img
-                              src="./homePage/img/main_product-5.jpg"
+                              src="assets/homePage/img/main_product-5.jpg"
                               alt=""
                             />
                           </li>
@@ -454,25 +454,25 @@
                     <ul class="row carousel-item-list">
                       <li class="col-xl-3 col-lg-3 col-md-4 col-6 carousel-item-product">
                         <img
-                          src="./homePage/img/main_img.png"
+                          src="assets/homePage/img/main_img.png"
                           alt=""
                         />
                       </li>
                       <li class="col-xl-3 col-lg-3 col-md-4 col-6 carousel-item-product">
                         <img
-                          src="./homePage/img/main_product-5.jpg"
+                          src="assets/homePage/img/main_product-5.jpg"
                           alt=""
                         />
                       </li>
                       <li class="col-xl-3 col-lg-3 col-md-4 col-md-4 d-xl-block d-lg-block d-md-block d-none carousel-item-product">
                         <img
-                          src="./homePage/img/main_product-4.jpg"
+                          src="assets/homePage/img/main_product-4.jpg"
                           alt=""
                         />
                       </li>
                       <li class="col-xl-3 col-lg-3 col-md-4 d-xl-block d-lg-block d-md-none d-none carousel-item-product">
                         <img
-                          src="./homePage/img/main_product-3.jpg"
+                          src="assets/homePage/img/main_product-3.jpg"
                           alt=""
                         />
                       </li>
@@ -482,25 +482,25 @@
                     <ul class="row carousel-item-list">
                       <li class="col-xl-3 col-lg-3 col-md-4 col-6 carousel-item-product">
                         <img
-                          src="./homePage/img/main_product-2.jpg"
+                          src="assets/homePage/img/main_product-2.jpg"
                           alt=""
                         />
                       </li>
                       <li class="col-xl-3 col-lg-3 col-md-4 col-6 carousel-item-product">
                         <img
-                          src="./homePage/img/main_product-5.jpg"
+                          src="assets/homePage/img/main_product-5.jpg"
                           alt=""
                         />
                       </li>
                       <li class="col-xl-3 col-lg-3 col-md-4 col-md-4 d-xl-block d-lg-block d-md-block d-none carousel-item-product">
                         <img
-                          src="./searchPage/img/main_product.jpg"
+                          src="assets/searchPage/img/main_product.jpg"
                           alt=""
                         />
                       </li>
                       <li class="col-xl-3 col-lg-3 col-md-4 d-xl-block d-lg-block d-md-none d-none carousel-item-product">
                         <img
-                          src="./homePage/img/main_product-4.jpg"
+                          src="assets/homePage/img/main_product-4.jpg"
                           alt=""
                         />
                       </li>
@@ -541,7 +541,7 @@
                 >
                 <div class="card-body">
                   <img
-                    src="./homePage/img/type_img.png"
+                    src="assets/homePage/img/type_img.png"
                     alt=""
                     class="main__product-img "
                   />
@@ -552,7 +552,7 @@
                 >
                 <div class="card-body">
                   <img
-                    src="./homePage/img/type_img2.png"
+                    src="assets/homePage/img/type_img2.png"
                     alt=""
                     class="main__product-img "
                   />
@@ -563,7 +563,7 @@
                 >
                 <div class="card-body">
                   <img
-                    src="./homePage/img/type_img3.png"
+                    src="assets/homePage/img/type_img3.png"
                     alt=""
                     class="main__product-img "
                   />
@@ -574,7 +574,7 @@
                 >
                 <div class="card-body">
                   <img
-                    src="./homePage/img/type_img4.png"
+                    src="assets/homePage/img/type_img4.png"
                     alt=""
                     class="main__product-img "
                   />
@@ -585,7 +585,7 @@
                 >
                 <div class="card-body">
                   <img
-                    src="./homePage/img/type_img5.png"
+                    src="assets/homePage/img/type_img5.png"
                     alt=""
                     class="main__product-img "
                   />
@@ -596,7 +596,7 @@
                 >
                 <div class="card-body">
                   <img
-                    src="./homePage/img/type_img6.png"
+                    src="assets/homePage/img/type_img6.png"
                     alt=""
                     class="main__product-img "
                   />
@@ -617,13 +617,13 @@
               <div class="row">
                 <div class="card col-xl-4 col-lg-4 col-md-4 main__subProduct">
                   <div class="card-body">
-                    <img src="./public/img/masthead_logo.jpg" alt="" />
+                    <img src="assets/public/img/masthead_logo.jpg" alt="" />
                   </div>
                 </div>
                 <div class="card col-xl-4 col-lg-4 col-md-4 main__subProduct">
                   <div class="card-body">
                     <img
-                      src="./homePage/img/main_subProduct.jpg"
+                      src="assets/homePage/img/main_subProduct.jpg"
                       alt=""
                     />
                   </div>
@@ -631,7 +631,7 @@
                 <div class="card col-xl-4 col-lg-4 col-md-4 main__subProduct">
                   <div class="card-body">
                     <img
-                      src="./homePage/img/life-style__img.jpg"
+                      src="assets/homePage/img/life-style__img.jpg"
                       alt=""
                     />
                   </div>
@@ -647,7 +647,7 @@
           <div class="row d-flex align-items-center justify-content-center">
             <div class="col-xl-3 col-lg-3 col-md-6 col-6">
               <img
-                src="./public/img/masthead_logo.jpg"
+                src="assets/public/img/masthead_logo.jpg"
                 alt=""
                 class="footer_img"
               />
@@ -674,7 +674,7 @@
               </ul>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-6">
-              <img src="./public/img/footer-img.jpg" alt="" class="footer_img" />
+              <img src="assets/public/img/footer-img.jpg" alt="" class="footer_img" />
             </div>
           </div>
         </div>

@@ -126,3 +126,7 @@
 .form-cart__size-list{
     user-select: none;
 }
+
+.content-detail .control-detail__img-product{
+    display: block;
+}

@@ -1,5 +1,5 @@
 <?php
-include_once "db_module.php";
+include_once "../modules/db_module.php";
 $link = null;
 taoKetNoi($link);
 $result = chayTruyVanTraVeDL($link, "select * from tbl_danhmuc");

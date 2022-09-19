@@ -1,6 +1,6 @@
 <?php
-include_once "db_module.php";
-include_once "category.php";
+include_once "../modules/db_module.php";
+include_once "../views/category.php";
 
 $link = null;
 taoKetNoi($link);
@@ -12,14 +12,14 @@ if(isset($_GET['id'])){
     $subResult = chayTruyVanTraVeDL($link, "select dm_ten from tbl_sanpham sp, tbl_danhmuc dm where sp.dm_id=dm.dm_id and sp.id_sp = ".$_GET['id']."");
     $subRow = mysqli_fetch_row($subResult);
     echo "
-    <div class='row mb-30'>
-    <div class='col-lg-6 col-12'>
-      <div class='card contain-detail__product-main'>
-        <div class='card-body'>
-          <div class='control-detail__img-product'>
-            <span class='detail-control-product detail__pre-product'>
-              <i class='fa-solid fa-chevron-left'></i>
-            </span>
+    <form class='row mb-30' method = 'get'>
+      <div class='col-lg-6 col-12'>
+        <div class='card contain-detail__product-main'>
+          <div class='card-body'>
+            <div class='control-detail__img-product'>
+              <span class='detail-control-product detail__pre-product'>
+                <i class='fa-solid fa-chevron-left'></i>
+              </span>
             <div>
               <img src='".$row[3]."' alt='' class='detail__product-main-img'>
             </div>
@@ -38,7 +38,7 @@ if(isset($_GET['id'])){
         ?>
     <div class='col-lg-6 col-12'>
         <nav class='breadcrumbs_list col-12'>
-            <a href='./index.php' class='breadcrumb__link'>HOME</a>
+            <a href='../index.php' class='breadcrumb__link'>HOME</a>
             <span class='divider'>/</span>
             <a href='./searchPage.php' class='breadcrumb__link breadcrumb__link'>SEARCH</a>
             <span class='divider'>/</span>
@@ -51,7 +51,6 @@ if(isset($_GET['id'])){
             <span class='detail__product-price'>".$row[2].".000</span>
             <span class='detail__product-symbolP'>₫</span>
           </div>
-          <form action='' class='form-cart'>
             <div class='form-cart__contain-size'>
               <label for='' class='form-cart__size-label'>Size</label>
               <ul class='form-cart__size-list'>
@@ -71,15 +70,14 @@ if(isset($_GET['id'])){
                   <span class='quantity-control quantity-control__minus'>
                     <span>-</span>
                   </span>
-                  <input type='text' class='control-quantity__current'>
+                  <input type='text' class='control-quantity__current' name='quantity'>
                   <span class='quantity-control quantity-control__plus'>
                     <span>+</span>
                   </span>
                   
                 </div>
-                <button type='button' class='btn btn__add-cart'>ADD TO CART</button>
+                <input type='submit' class='btn btn__add-cart' value ='ADD TO CART' name ='id=2'>
             </div>
-          </form>
         </div>
         <div class='detail__product-ship-calculator col-12'>
           <h4 class='ship-calculator__title'>Expected Delivery Information</h4>
@@ -99,7 +97,7 @@ if(isset($_GET['id'])){
           </span>
         </div>
     </div>
-</div>
+</form>
     ";
 } 
 ?>

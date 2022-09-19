@@ -1,21 +1,21 @@
 <?php
-include_once "db_module.php";
+include_once "../modules/db_module.php";
 include_once "category.php";
 
 $link = null;
 taoKetNoi($link);
 
 // pagination render
-include "pagination_render.php";
+include "../models/pagination_render.php";
 
 
 // category render 
-include "category_render.php";
+include "../models/category_render.php";
 
 // searchInput render
-include "searchInput_render.php";
+include "../models/searchInput_render.php";
 // sort render
-include "sort_render.php";
+include "../models/sort_render.php";
 
 if(!isset($_GET['page']) && !isset($_GET['search']) && !isset($_GET['sort']) && !isset($_GET['dm'])) {
     $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham limit ".$from.", ".$num_on_page);
@@ -44,15 +44,7 @@ while ($rows = mysqli_fetch_object($result)) {
 echo "</div>";
 
 
+include "../controller/pagination_logic.php";
+giaiPhongBoNho($link, $result);
 
-
-
-if(isset($slg)) {
-    if(mysqli_fetch_row($slg)[0]<=12){
-    }
-} else {
-        // pagination logic
-    include "pagination_logic.php";
-
-}
 
