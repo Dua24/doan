@@ -5,6 +5,9 @@ class sanpham{
     private $gia_sp;
     private $img_sp;
     private $dm_id;
+    private $size_sp;
+    private $sl_sp;
+
     public function getId() {
         return $this->id_sp;
     }
@@ -20,12 +23,19 @@ class sanpham{
     public function getDm_id() {
         return $this->dm_id;
     }
-    public function __construct($id_sp,$ten_sp,$gia_sp,$img_sp,$dm_id) {
-        $this->id_sp=$id_sp;
+    public function getSize_sp() {
+        return $this->size_sp;
+    }
+    public function getSl_sp() {
+        return $this->sl_sp;
+    }
+    
+    public function __construct($ten_sp,$gia_sp,$img_sp,$size_sp,$sl_sp) {
         $this->ten_sp=$ten_sp;
         $this->gia_sp=$gia_sp;
         $this->img_sp=$img_sp;
-        $this->dm_id=$dm_id;
+        $this->size_sp=$size_sp;
+        $this->sl_sp=$sl_sp;
     }
     public function __toString() {
         return "";

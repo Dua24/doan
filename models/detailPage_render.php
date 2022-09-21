@@ -6,13 +6,14 @@ $link = null;
 taoKetNoi($link);
 
 
-if(isset($_GET['id'])){
+if(isset($_GET['id']) || (isset($_GET['id']) && isset($_GET['size']) && isset($_GET['quantity']))){
     $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham where id_sp =".$_GET['id']."");
     $row = mysqli_fetch_row($result);
     $subResult = chayTruyVanTraVeDL($link, "select dm_ten from tbl_sanpham sp, tbl_danhmuc dm where sp.dm_id=dm.dm_id and sp.id_sp = ".$_GET['id']."");
     $subRow = mysqli_fetch_row($subResult);
     echo "
-    <form class='row mb-30' method = 'get'>
+    <div class='row mb-30'>
+      <input style='display:none' type='radio' checked = 'true' value ='".$_GET['id']."' name='id' >
       <div class='col-lg-6 col-12'>
         <div class='card contain-detail__product-main'>
           <div class='card-body'>
@@ -51,33 +52,35 @@ if(isset($_GET['id'])){
             <span class='detail__product-price'>".$row[2].".000</span>
             <span class='detail__product-symbolP'>₫</span>
           </div>
+          <form action='cart.php' method = 'post'>
             <div class='form-cart__contain-size'>
               <label for='' class='form-cart__size-label'>Size</label>
-              <ul class='form-cart__size-list'>
-                <li class='form-cart__size-item'>
-                  <span class='form-cart__size-text'>L</span>
-                </li>
-                <li class='form-cart__size-item'>
-                  <span class='form-cart__size-text'>M</span>
-                </li>
-                <li class='form-cart__size-item'>
-                  <span class='form-cart__size-text'>XL</span>
-                </li>
-              </ul>
+              <div>
+                <label for='szs' class='form-cart__size-item active'>S</label>
+                <input style='display:none' type='radio' class='' checked='true' value ='S' name='size' id='szs'>
+                <label for='szl' class='form-cart__size-item'>L</label>
+                <input style='display:none' type='radio' class='' value ='L' name='size' id='szl'>
+                <label for='szxl' class='form-cart__size-item'>XL</label>
+                <input style='display:none' type='radio' class='' value ='XL' name='size' id='szxl'>
+              </div>
             </div>
             <div class='form-cart__contain-add'>
                 <div class='form-cart__control-quantity'>
                   <span class='quantity-control quantity-control__minus'>
                     <span>-</span>
                   </span>
-                  <input type='text' class='control-quantity__current' name='quantity'>
+                  <input value='1' type='text' class='control-quantity__current' name='quantity'>
                   <span class='quantity-control quantity-control__plus'>
                     <span>+</span>
                   </span>
                   
                 </div>
-                <input type='submit' class='btn btn__add-cart' value ='ADD TO CART' name ='id=2'>
+                <input type='submit' class='btn btn__add-cart' name='addcart' value ='ADD TO CART' >
             </div>
+            <input type='hidden' name='tensp' value='".$row[1]."'>
+            <input type='hidden' name='imgsp' value='".$row[3]."'>
+            <input type='hidden' name='gia' value='".$row[2]."'>
+          </form>
         </div>
         <div class='detail__product-ship-calculator col-12'>
           <h4 class='ship-calculator__title'>Expected Delivery Information</h4>
@@ -97,7 +100,7 @@ if(isset($_GET['id'])){
           </span>
         </div>
     </div>
-</form>
+</div>
     ";
-} 
+}
 ?>

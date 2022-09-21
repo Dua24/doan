@@ -117,7 +117,9 @@ window.onload = function() {
             const header_label = document.querySelector(".header__top-label")
             header_label.style.textAlign="center"
             mastheadLogo.style.textAlign="center"
-            headerCartTitle.style.display="none"
+            if(headerCartTitle){
+                headerCartTitle.style.display="none"
+            }
             if(mainHeaderSort){
                 mainHeaderSort.style.justifyContent="center"
             }
@@ -134,7 +136,9 @@ window.onload = function() {
         if(document.body.clientWidth>992) {
             header_label.style.textAlign="left"
             mastheadLogo.style.textAlign="left"
-            headerCartTitle.style.display="block"
+            if(headerCartTitle){
+                headerCartTitle.style.display="block"
+            }
             if(form_control) {
                 form_control.style.justifyContent="right"
             }

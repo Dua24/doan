@@ -76,6 +76,12 @@
     border: none;
     position: relative !important;
     text-decoration: none;
+    transition: filter linear 0.15s;
+
+}
+.sPage__content-product-item:hover{
+    filter: brightness(0.95);
+    transition: filter linear 0.15s;
 }
 .sPage__content-product-img{
     position: relative;
