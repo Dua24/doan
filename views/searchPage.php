@@ -67,7 +67,9 @@
                         <div class="modal-inner modal-inner-filter">
                           <ul class="category-list">
                             <?php
-                              include 'category.php';
+                              include '../controller/categoryController.php';
+                              $controller = new Category_Controller();
+                              $controller->invoke();
                             ?>
                         </ul>
                         <span class="modal-exit">
@@ -95,8 +97,9 @@
                     <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block d-none d-sm-none main-sPage__content-category">
                         <ul class="category-list">
                             
-                            <?php
-                              include 'category.php';
+                        <?php
+                              $controller1 = new Category_Controller();
+                              $controller1->invoke();
                             ?>
                             
                         </ul>

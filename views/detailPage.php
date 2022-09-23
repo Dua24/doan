@@ -54,7 +54,9 @@
               <ul class="category-list">
                   <ul class="category-list">
                       <?php
-                        include 'category.php';
+                        include '../controller/categoryController.php';
+                        $controller = new Category_Controller();
+                        $controller->invoke();
                       ?>
                   </ul>
                   

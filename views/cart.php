@@ -95,7 +95,7 @@ function showgiohang3() {
         ";
       }
     echo "
-        <tr class='row' style= 'font-weight: 700;color: #3f3f3f8a;' >
+        <tr class='row' style= 'font-weight: 700;color: #740303;' >
           <td class='col-10 col-md-10'>
             <span >TỔNG</span>
           </td>
