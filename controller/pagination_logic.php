@@ -1,4 +1,8 @@
 <?php
+include '../truyvandb/category_render.php';
+include '../truyvandb/searchInput_render.php';
+include '../truyvandb/pagination_render.php';
+
 if(isset($slg)) {
     if(mysqli_fetch_row($slg)[0]<=12){
     }

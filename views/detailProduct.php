@@ -1,16 +1,4 @@
 <?php
-include_once "../modules/db_module.php";
-include_once "../views/category.php";
-
-$link = null;
-taoKetNoi($link);
-
-
-if(isset($_GET['id']) || (isset($_GET['id']) && isset($_GET['size']) && isset($_GET['quantity']))){
-    $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham where id_sp =".$_GET['id']."");
-    $row = mysqli_fetch_row($result);
-    $subResult = chayTruyVanTraVeDL($link, "select dm_ten from tbl_sanpham sp, tbl_danhmuc dm where sp.dm_id=dm.dm_id and sp.id_sp = ".$_GET['id']."");
-    $subRow = mysqli_fetch_row($subResult);
     echo "
     <div class='row mb-30'>
       <input style='display:none' type='radio' checked = 'true' value ='".$_GET['id']."' name='id' >
@@ -22,7 +10,7 @@ if(isset($_GET['id']) || (isset($_GET['id']) && isset($_GET['size']) && isset($_
                 <i class='fa-solid fa-chevron-left'></i>
               </span>
             <div>
-              <img src='".$row[3]."' alt='' class='detail__product-main-img'>
+              <img src='".$product->getImg()."' alt='' class='detail__product-main-img'>
             </div>
             <span class='detail-control-product  detail__next-product'>
               <i class='fa-solid fa-chevron-right'></i>
@@ -33,23 +21,14 @@ if(isset($_GET['id']) || (isset($_GET['id']) && isset($_GET['size']) && isset($_
           </span>
         </div>
       </div>
-        </div>
-        <?php
-          include 'detailPage_render.php';
-        ?>
+    </div>
+        
     <div class='col-lg-6 col-12'>
-        <nav class='breadcrumbs_list col-12'>
-            <a href='../index.php' class='breadcrumb__link'>HOME</a>
-            <span class='divider'>/</span>
-            <a href='./searchPage.php' class='breadcrumb__link breadcrumb__link'>SEARCH</a>
-            <span class='divider'>/</span>
-            <a href='searchPage.php?dm=".$row[4]."&dm_ten=".$subRow[0]."' class='breadcrumb__link breadcrumb__link text-uppercase' style='color:#000;font-weight:600'>".$subRow[0]."</a>
-        </nav>
         <div class='detail__product-specific col-12'>
-          <h1 class='detail__product-name'>".$row[1]."</h1>
+          <h1 class='detail__product-name'>".$product->getTen()."</h1>
           <span class='h-divider'></span>
           <div class='detail__product-contain-price'>
-            <span class='detail__product-price'>".$row[2].".000</span>
+            <span class='detail__product-price'>".$product->getGia().".000</span>
             <span class='detail__product-symbolP'>₫</span>
           </div>
           <form action='cart.php' method = 'post'>
@@ -77,9 +56,9 @@ if(isset($_GET['id']) || (isset($_GET['id']) && isset($_GET['size']) && isset($_
                 </div>
                 <input type='submit' class='btn btn__add-cart' name='addcart' value ='ADD TO CART' >
             </div>
-            <input type='hidden' name='tensp' value='".$row[1]."'>
-            <input type='hidden' name='imgsp' value='".$row[3]."'>
-            <input type='hidden' name='gia' value='".$row[2]."'>
+            <input type='hidden' name='tensp' value='".$product->getTen()."'>
+            <input type='hidden' name='imgsp' value='".$product->getImg()."'>
+            <input type='hidden' name='gia' value='".$product->getGia()."'>
           </form>
         </div>
         <div class='detail__product-ship-calculator col-12'>
@@ -94,13 +73,9 @@ if(isset($_GET['id']) || (isset($_GET['id']) && isset($_GET['size']) && isset($_
             SKU: 
             <span class='sku'>N/A</span>
           </span>
-          <span class='posted-in'>
-            Category:
-            <a href='searchPage.php?dm=".$row[4]."&dm_ten=".$subRow[0]."'>".$subRow[0]."</a>
-          </span>
+        
         </div>
     </div>
 </div>
     ";
-}
 ?>

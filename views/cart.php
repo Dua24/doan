@@ -126,7 +126,19 @@ function showgiohang3() {
         ";
         
   } else {
-    echo "<span class='header-cart-noCart'>No products in the cart.</span>";
+    echo "<span class='header-cart-noCart'>No products in the cart.</span>
+          <a href='searchPage.php' class='controlShopCart'>
+            <button style='width: 100%;
+              height: 45px;
+              font-weight: 600;
+              background-color: #0080004a;
+              font-size:14px'>
+              Quay lại mua hàng
+            </button>
+          </a>
+    "
+      
+    ;
   }
 }
 

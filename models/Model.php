@@ -1,14 +1,13 @@
 <?php
-
 include_once "../modules/db_module.php";
-require_once "../typeProduct/typeProduct.php";
 require_once "danhmuc.php";
+require_once "sanpham.php";
+
 
 class Model{
     public function getCategoryList()
     {
-        $link = null;
-        taoKetNoi($link);
+        include '../link.php';
         $result = chayTruyVanTraVeDL($link, "select * from tbl_danhmuc");
         $data = array();
         while($rows = mysqli_fetch_object($result)){
@@ -19,8 +18,10 @@ class Model{
         return $data;
     }
     public function getProductList() {
-        $link = null;
-        taoKetNoi($link);
+        // result
+        require_once "../typeProduct/typeProduct.php";
+        //--
+        include '../link.php';
         $data = array();
         while($rows = mysqli_fetch_object($result)){
             $sp = new sanpham($rows->id_sp,$rows->ten_sp,$rows->gia_sp,$rows->img_sp,$rows->dm_id);
@@ -30,7 +31,14 @@ class Model{
         return $data;
     }
     public function getProductById($id) {
-        
+        //--
+        include '../link.php';
+        $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham where id_sp = $id");
+        while($rows = mysqli_fetch_object($result)){
+            $sp = new sanpham($rows->id_sp,$rows->ten_sp,$rows->gia_sp,$rows->img_sp,$rows->dm_id);
+        }
+        giaiPhongBoNho($link,$result);
+        return $sp;
     }
 }
 ?>

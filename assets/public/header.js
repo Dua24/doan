@@ -23,7 +23,6 @@ window.onload = function() {
     function showModal(type) {
         const modalLayout = document.querySelector(`.modal-layout.modal-layout-${type}`)
         const modalInner = document.querySelector(`.modal-inner-${type}`)
-        console.log(modalLayout)
         if(modalLayout) {
             modalLayout.classList.add(`${type}`)
             modalLayout.onclick = function() {

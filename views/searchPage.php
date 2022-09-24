@@ -54,8 +54,8 @@
                     </nav>
                     <!-- search input -->
                     <form style="height:30px; font-size:15px" class="col-lg-4 d-lg-flex d-none" action="">
-                      <input type="text" class="main-sPage-searc" name="search">
-                      <input style ="background-color:#000; color:#fff; border-radius:none; font-weight:600; margin-left:2px" type="submit" value="Tìm kiếm">
+                      <input autocomplete="off" type="text" class="main-sPage-searc" name="search">
+                      <input autocomplete="off" style ="background-color:#000; color:#fff; border-radius:none; font-weight:600; margin-left:2px" type="submit" value="Tìm kiếm">
                     </form>
                     <div class="menu-filter-mobile d-lg-none d-block">
                       <i class="fa-solid fa-bars"></i>
@@ -68,8 +68,8 @@
                           <ul class="category-list">
                             <?php
                               include '../controller/categoryController.php';
-                              $controller = new Category_Controller();
-                              $controller->invoke();
+                              $modal_category = new Category_Controller();
+                              $modal_category->invoke();
                             ?>
                         </ul>
                         <span class="modal-exit">
@@ -98,8 +98,8 @@
                         <ul class="category-list">
                             
                         <?php
-                              $controller1 = new Category_Controller();
-                              $controller1->invoke();
+                              $main_category = new Category_Controller();
+                              $main_category->invoke();
                             ?>
                             
                         </ul>
@@ -108,9 +108,14 @@
                     <div class="col-xl-9 col-lg-9 col-md-12 col sPage__content-product">
                         <!-- product -->
                         <?php
-                              include 'product.php';
+                              include '../controller/productController.php';
+                              $product = new Product_Controller();
+                              $product->invoke();
                             ?>
+                        <?php
+                            include '../controller/pagination_logic.php';
                         
+                        ?>
                         
                     </div>
                   </div>
@@ -167,14 +172,14 @@
                       <form>
                           <div class="form-group form-group__wrapper">
                           <label for="exampleInputEmail11">Username or email address </label>
-                          <input type="email" class="form-control" id="exampleInputEmail11"  placeholder="Enter email">
+                          <input type="email" class="form-control" id="exampleInputEmail11" autocomplete="off"  placeholder="Enter email">
                           </div>
                           <div class="form-group form-group__wrapper">
                           <label for="exampleInputPassword11">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword11" placeholder="Password">
+                          <input type="password" class="form-control" id="exampleInputPassword11" autocomplete="off" placeholder="Password">
                           </div>
                           <div class="form-check form-check__wrapper">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck11">
+                          <input type="checkbox" class="form-check-input" autocomplete="off" id="exampleCheck11">
                           <label class="form-check-label" for="exampleCheck11">Remember me</label>
                           </div>
                           <button type="submit" class="btn btn__primary">Log in</button>
@@ -195,15 +200,15 @@
                       <form>
                           <div class="form-group form-group__wrapper">
                           <label for="exampleInputEmail2">Username or email address </label>
-                          <input type="email" class="form-control" id="exampleInputEmail2"  placeholder="Enter email">
+                          <input type="email" class="form-control" id="exampleInputEmail2" autocomplete="off"  placeholder="Enter email">
                           </div>
                           <div class="form-group form-group__wrapper">
                           <label for="exampleInputPassword2">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                          <input type="password" class="form-control" id="exampleInputPassword2" autocomplete="off" placeholder="Password">
                           </div>
                           <div class="form-group form-group__wrapper">
                             <label for="exampleInputPassword3">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword3" autocomplete="off" placeholder="Password">
                             </div>
                           <button type="submit" class="btn btn__primary">Register</button>
                       </form>

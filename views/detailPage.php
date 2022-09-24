@@ -64,7 +64,10 @@
           </div>
             <div class="col-xl-9 col-lg-9 col-12 contain-detail__product">
                 <?php
-                  include "../models/detailPage_render.php";
+                  include '../controller/productController.php';
+                  $detailProduct = new Product_Controller();
+                  $detailProduct->invoke();
+
                 ?>
               <div class="row product-footer">
                 <ul class="product-footer_accordian">
