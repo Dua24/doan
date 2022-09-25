@@ -105,20 +105,20 @@ function showgiohang3() {
         </tr>
         <tr class='row controlShopCart' >
           <td class='col-12'>
-          <a href='cart.php?delcart=1'><button style='width: 100%;
-          height: 45px;
-          font-weight: 600;
-          background-color:#c2424263;
-      '>Xóa giỏ hàng</button></a>
-          </td>
-        </tr>
-        <tr class='row controlShopCart' >
-          <td class='col-12'>
           <a href='searchPage.php'><button style='width: 100%;
           height: 45px;
           font-weight: 600;
           background-color: #0080004a;
       '>Tiếp tục mua hàng</button></a>
+          </td>
+        </tr>
+        <tr class='row controlShopCart' >
+          <td class='col-12'>
+          <a href='cart.php?delcart=1'><button style='width: 100%;
+          height: 45px;
+          font-weight: 600;
+          background-color:#c2424263;
+      '>Xóa giỏ hàng</button></a>
           </td>
         </tr>
       </tbody>
