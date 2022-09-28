@@ -169,7 +169,7 @@
                 <div class="contain-modal">
                     <div class="modal-inner modal-inner-login">
                         <h2 class="modal-heading modal-heading__login">Login</h2>
-                        <form action='xulydangnhap.php' method='post'>
+                        <form action='../xulydangnhap.php' method='post'>
                             <div class="form-group form-group__wrapper">
                             <label for="loginUsername">Username</label>
                             <input type="text" class="form-control" id="loginUsername" name="lusername"  placeholder="Enter user name">

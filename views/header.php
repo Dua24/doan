@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 echo "
 <header id='header' class='row'>
 <div class='header__top col-12'>
@@ -101,7 +104,7 @@ echo "
 ";
 ?>
 <?php
-  if(!isset($_GET['msg']) && !$_SESSION['username']) {
+  if(!isset($_GET['msg']) && !isset($_SESSION['username'])) {
     echo "
     <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
       LOGIN

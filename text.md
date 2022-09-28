@@ -20,11 +20,7 @@ login reigster
     </li>
 
 user 
-<li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
-          <div class='user'>
-            <span class='text-uppercase'>Nguyen Duy Nguyen</span>
-          </div>
-        </li>
+
 
 
 
