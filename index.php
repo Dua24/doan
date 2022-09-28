@@ -336,14 +336,14 @@
                 <div class="contain-modal">
                     <div class="modal-inner modal-inner-login">
                         <h2 class="modal-heading modal-heading__login">Login</h2>
-                        <form>
+                        <form action='xulydangnhap.php' method='post'>
                             <div class="form-group form-group__wrapper">
-                            <label for="exampleInputEmail1">Username or email address </label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter email">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" class="form-control" id="loginUsername" name="lusername"  placeholder="Enter user name">
                             </div>
                             <div class="form-group form-group__wrapper">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="lpassword" placeholder="Password">
                             </div>
                             <div class="form-check form-check__wrapper">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -364,18 +364,18 @@
               <div class="contain-modal">
                   <div class="modal-inner modal-inner-register">
                       <h2 class="modal-heading modal-heading__register">register</h2>
-                      <form>
+                      <form action="xulydangky.php" method ="post">
                           <div class="form-group form-group__wrapper">
-                          <label for="exampleInputEmail2">Username or email address </label>
-                          <input type="email" class="form-control" id="exampleInputEmail2"  placeholder="Enter email">
+                          <label for="registerUsername">Username</label>
+                          <input type="text" class="form-control" id="registerUsername" name='rusername'  placeholder="Enter user name">
                           </div>
                           <div class="form-group form-group__wrapper">
                           <label for="exampleInputPassword2">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                          <input type="password" class="form-control" id="exampleInputPassword2" name='rpassword' placeholder="Password">
                           </div>
                           <div class="form-group form-group__wrapper">
                             <label for="exampleInputPassword3">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword3" name ='repassword' placeholder="Password">
                             </div>
                           <button type="submit" class="btn btn__primary">Register</button>
                       </form>

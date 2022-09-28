@@ -1,4 +1,5 @@
 <?php
+session_start();
 echo "
 <header id='header' class='row'>
 <div class='header__top col-12'>
@@ -95,19 +96,87 @@ echo "
         </li>
        
       </ul>
-      <ul class='masthead__list justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flex d-md-flex d-flex'>
-        <div class='row align-items-center'>
+      <ul class='masthead__list row align-items-center justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flex d-md-flex d-flex'>
+
+";
+?>
+<?php
+  if(!isset($_GET['msg']) && !$_SESSION['username']) {
+    echo "
+    <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
+      LOGIN
+    </li>
+    <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
+      REGISTER
+    </li>
+";
+  } else if(isset($_GET['msg'])) {
+        if($_GET['msg'] == "done"){
+          echo "<div style='font-size:1.3rem;font-weight:500; color:#008000cc'>Bạn đã đăng ký tài khoản thành công</div>
+                <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
+                  LOGIN
+                </li>
+          ";
+      } else if($_GET['msg'] == "unvalid-data") {
+          echo "<div style='font-size:1.3rem;font-weight:500; color:#aaaa11'>Warning: Vui lòng kiểm tra lại dữ liệu nhập vào</div>
+                <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
+                  REGISTER
+                </li>
+          ";
+      } else if($_GET['msg'] =="duplicate"){
+          echo "<div style='font-size:1.3rem;font-weight:500; color:#aaaa11'>Warning: Tài khoản của bạn đã tồn lại</div>
+                <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
+                  REGISTER
+                </li>
+          ";
+      } else if($_GET['msg']=="login-fail") {
+          echo "<div style='font-size:1.3rem;font-weight:500; color:#8a0707'>Error: Tài khoản và mật khẩu không đúng. Vui lòng kiểm tra lại !</div>
+                <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
+                  LOGIN
+                </li>
+          ";
+      
+      } else if($_GET['msg']=='log-out') {
+        echo "
             <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
               LOGIN
-            </li>
-            
-        </div>
+          </li>
+          <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
+              REGISTER
+          </li>
+        ";
+      }
+  }
+  if(isset($_SESSION['username'])) {
+      echo "
+            <li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
+              <div class='user'>
+                <span class='text-uppercase' style='color: #706f6f;
+                font-weight: 700; letter-spacing:1px'>".$_SESSION['username']."</span>
+              </div>
+          </li>
+          <li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
+              <form action='dangxuat.php'>
+                <input style='
+                color: var(--black-color);
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 1.4rem;
+                border: none;
+                background-color: #fff;' type='submit' class='text-uppercase' value ='LOG OUT'>
+              </form>
+          </li>
+      ";
+  }
+
+?>
+<?php
+echo "
       </ul>
     </div>
   </div>
 </div>
 </header>
 ";
-
 
 ?>

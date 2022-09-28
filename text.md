@@ -11,6 +11,34 @@
                   <span class='header-cart__icon'>
                     <strong> 0 </strong>
 
+login reigster
+<li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
+      LOGIN
+    </li>
+    <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
+      REGISTER
+    </li>
+
+user 
+<li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
+          <div class='user'>
+            <span class='text-uppercase'>Nguyen Duy Nguyen</span>
+          </div>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  <!-- CART IN <= IPAD -->
             <div class='modal-layout'>

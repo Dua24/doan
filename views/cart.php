@@ -143,7 +143,7 @@ function showgiohang3() {
 }
 
 
-
+session_destroy()
 ?>
 
 <!DOCTYPE html>

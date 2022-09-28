@@ -110,13 +110,19 @@
 
 }
 .masthead__item:first-child{
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .menu-in_md{
     align-self: center;
     font-size: 2.5rem;
     color: rgba(102, 102, 102, .85);
     cursor: pointer;
+}
+.masthead__item-login{
+    margin-left:10px
+}
+.masthead__item-register{
+    margin-left: 10px;
 }
 .masthead__item-link:hover{
     color: var(--black-color);

@@ -166,49 +166,49 @@
             <!-- MODAL_LOGIN -->
             <!-- add class "login" for modal-layout -->
             <div class="modal-layout modal-layout-login">
-              <div class="contain-modal">
-                  <div class="modal-inner modal-inner-login">
-                      <h2 class="modal-heading modal-heading__login">Login</h2>
-                      <form>
-                          <div class="form-group form-group__wrapper">
-                          <label for="exampleInputEmail11">Username or email address </label>
-                          <input type="email" class="form-control" id="exampleInputEmail11" autocomplete="off"  placeholder="Enter email">
-                          </div>
-                          <div class="form-group form-group__wrapper">
-                          <label for="exampleInputPassword11">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword11" autocomplete="off" placeholder="Password">
-                          </div>
-                          <div class="form-check form-check__wrapper">
-                          <input type="checkbox" class="form-check-input" autocomplete="off" id="exampleCheck11">
-                          <label class="form-check-label" for="exampleCheck11">Remember me</label>
-                          </div>
-                          <button type="submit" class="btn btn__primary">Log in</button>
-                          <span class="lost-pw">Lost your password?</span>
-                      </form>
-                      <span class="modal-exit">
-                        <i class="fa-solid fa-xmark"></i>
-                    </span>
-                  </div>
-              </div>
-          </div>
-            <!-- MODAL_register -->
+                <div class="contain-modal">
+                    <div class="modal-inner modal-inner-login">
+                        <h2 class="modal-heading modal-heading__login">Login</h2>
+                        <form action='xulydangnhap.php' method='post'>
+                            <div class="form-group form-group__wrapper">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" class="form-control" id="loginUsername" name="lusername"  placeholder="Enter user name">
+                            </div>
+                            <div class="form-group form-group__wrapper">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="lpassword" placeholder="Password">
+                            </div>
+                            <div class="form-check form-check__wrapper">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn__primary">Log in</button>
+                            <span class="lost-pw">Lost your password?</span>
+                        </form>
+                        <span class="modal-exit">
+                          <i class="fa-solid fa-xmark"></i>
+                      </span>
+                    </div>
+                </div>
+            </div>
+    <!-- MODAL_register -->
             <!-- add class "register" for modal-layout -->
             <div class="modal-layout modal-layout-register">
               <div class="contain-modal">
                   <div class="modal-inner modal-inner-register">
                       <h2 class="modal-heading modal-heading__register">register</h2>
-                      <form>
+                      <form action="xulydangky.php" method ="post">
                           <div class="form-group form-group__wrapper">
-                          <label for="exampleInputEmail2">Username or email address </label>
-                          <input type="email" class="form-control" id="exampleInputEmail2" autocomplete="off"  placeholder="Enter email">
+                          <label for="registerUsername">Username</label>
+                          <input type="text" class="form-control" id="registerUsername" name='rusername'  placeholder="Enter user name">
                           </div>
                           <div class="form-group form-group__wrapper">
                           <label for="exampleInputPassword2">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword2" autocomplete="off" placeholder="Password">
+                          <input type="password" class="form-control" id="exampleInputPassword2" name='rpassword' placeholder="Password">
                           </div>
                           <div class="form-group form-group__wrapper">
                             <label for="exampleInputPassword3">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword3" autocomplete="off" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword3" name ='repassword' placeholder="Password">
                             </div>
                           <button type="submit" class="btn btn__primary">Register</button>
                       </form>
@@ -218,10 +218,6 @@
                   </div>
               </div>
           </div>
-          
-          
-           
-        
-    </div>
+      </div> 
 </body>
 </html>

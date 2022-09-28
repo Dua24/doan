@@ -1,5 +1,6 @@
 window.onload = function() {
     const loginBtn = document.querySelector(".masthead__item-login")
+    const registerBtn = document.querySelector(".masthead__item-register")
     const loginInMenu = document.querySelector(".modal-inner__item.login")
     const registerInMenu = document.querySelector(".modal-inner__item.register")
     
@@ -40,9 +41,11 @@ window.onload = function() {
                 e.stopPropagation()
             }
         }
-}        
-    loginBtn.onclick = function() {
-        showModal("login")
+}   
+    if(loginBtn) {
+        loginBtn.onclick = function() {
+            showModal("login")
+        }
     }
     loginInMenu.onclick = function() {
         showModal("login")
@@ -50,7 +53,11 @@ window.onload = function() {
     registerInMenu.onclick = function() {
         showModal("register")
     }
-    
+    if(registerBtn) {
+        registerBtn.onclick = function() {
+            showModal("register")
+        }
+    }
     // Handle quantity
     ;(function() {
         const minusBtn =document.querySelector(".quantity-control__minus");
