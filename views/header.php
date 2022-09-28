@@ -159,7 +159,7 @@ echo "
               </div>
           </li>
           <li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
-              <form action='dangxuat.php'>
+              <form action='".$linkdangxuat."'>
                 <input style='
                 color: var(--black-color);
                 font-size: 1.4rem;

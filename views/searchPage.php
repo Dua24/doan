@@ -37,6 +37,7 @@
           $linkhome = "../index.php";
           $linksearchpage ="";
           $linkcart = "cart.php";
+          $linkdangxuat = "../controller/dangxuat.php";
           include "header.php";
         ?>
 
@@ -169,7 +170,7 @@
                 <div class="contain-modal">
                     <div class="modal-inner modal-inner-login">
                         <h2 class="modal-heading modal-heading__login">Login</h2>
-                        <form action='../xulydangnhap.php' method='post'>
+                        <form action='../controller/xulydangnhap.php' method='post'>
                             <div class="form-group form-group__wrapper">
                             <label for="loginUsername">Username</label>
                             <input type="text" class="form-control" id="loginUsername" name="lusername"  placeholder="Enter user name">
@@ -197,7 +198,7 @@
               <div class="contain-modal">
                   <div class="modal-inner modal-inner-register">
                       <h2 class="modal-heading modal-heading__register">register</h2>
-                      <form action="xulydangky.php" method ="post">
+                      <form action="../controller/xulydangky.php" method ="post">
                           <div class="form-group form-group__wrapper">
                           <label for="registerUsername">Username</label>
                           <input type="text" class="form-control" id="registerUsername" name='rusername'  placeholder="Enter user name">
