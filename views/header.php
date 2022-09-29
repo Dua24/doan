@@ -1,8 +1,7 @@
 <?php
-if(!isset($_SESSION)) 
-{ 
-    session_start(); 
-} 
+if (!isset($_SESSION)) {
+  session_start();
+}
 echo "
 <header id='header' class='row'>
 <div class='header__top col-12'>
@@ -47,119 +46,104 @@ echo "
                               </button>
                           </form>
                           <ul class='modal-inner__list'>
-                              <li class='modal-inner__item'>
-                                  <a href='".$linksearchpage."' class='modal-inner__item-link'>search page</a>
-                              </li>
-                              <li class='modal-inner__item'>
-                                  <a href='".$linkcart."' class='modal-inner__item-link'>cart page</a>
-                              </li>
-                              <li class='modal-inner__item login'>
+                              ";
+?>
+                            <?php
+                            if (isset($_SESSION['username'])) {
+                              echo "
+                                <li class='modal-inner__item'>
+                                  <a href='' class='modal-inner__item-link' style='font-weight:800; color:#453737'>" . $_SESSION['username'] . "</a>
+                                </li>
+                                <li class='modal-inner__item'>
+                                    <a href='" . $linksearchpage . "' class='modal-inner__item-link'>search page</a>
+                                </li>
+                                <li class='modal-inner__item'>
+                                    <a href='" . $linkcart . "' class='modal-inner__item-link'>cart page</a>
+                                </li>
+                                <li class='modal-inner__item'>
+                                  <form action='" . $linkdangxuat . "'>
+                                    <input style='
+                                    text-decoration: none;
+                                    color: rgba(102, 102, 102, .85);
+                                    font-weight: 700;
+                                    font-size: 1.2rem;
+                                    text-transform: uppercase;
+                                    border: none;
+                                    padding:0;
+                                    background-color: #fff;' type='submit' class='text-uppercase' value ='LOG OUT'>
+                                  </form>
+                                </li>
+                                ";
+                            } else {
+                              echo "
+                                <li class='modal-inner__item'>
+                                    <a href='" . $linksearchpage . "' class='modal-inner__item-link'>search page</a>
+                                </li>
+                                <li class='modal-inner__item'>
+                                    <a href='" . $linkcart . "' class='modal-inner__item-link'>cart page</a>
+                                </li>
+                                <li class='modal-inner__item login'>
                                   <a href='#' class='modal-inner__item-link'>login</a>
-                              </li>
-                              <li class='modal-inner__item register'>
-                                  <a href='#' class='modal-inner__item-link'>register</a>
-                              </li>
+                                </li>
+                                <li class='modal-inner__item register'>
+                                    <a href='#' class='modal-inner__item-link'>register</a>
+                                </li>
+                                ";
+                            }
+                            ?>
+                  <?php
+                  echo "
                               <li class='modal-inner__item'>
-                                  <a href='' class='modal-inner__item-link'>
-                                      <i class='fa-brands fa-facebook-f'></i>
-                                      <i class='fa-brands fa-instagram'></i>
-                                      </a>
+                              <a href='' class='modal-inner__item-link'>
+                                  <i class='fa-brands fa-facebook-f'></i>
+                                  <i class='fa-brands fa-instagram'></i>
+                                  </a>
                               </li>
                           </ul>
                           <span class='modal-exit menu'>
                               <i class='fa-solid fa-xmark'></i>
                           </span>
-                      </div>
                   </div>
               </div>
-            
-        </div>
-      <div class='masthead__logo col-xl-2 col-lg-2 col-md-8 col-8'>
-        <a
-          href='".$linkhome."'
-          class='masthead__logo-link'
-        >
-          <img src='".$linklogo."' alt='' />
-        </a>
-      </div>
-      <ul class='masthead__list justify-content-start col-xl-5 col-lg-5 d-xl-flex d-lg-flex d-md-none d-none'>
-        <li class='masthead__item'>
-          <a
-            href='".$duongdan."'
-            class='masthead__item-link'
-            >SEARCH PAGE</a
-          >
-        </li>
-        <li class='masthead__item'>
-          <a
-            href='".$linkcart."'
-            class='masthead__item-link'
-            >CART</a
-          >
-        </li>
-       
-      </ul>
-      <ul class='masthead__list row align-items-center justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flex d-md-flex d-flex'>
+          </div>
 
-";
-?>
+          </div>
+          <div class='masthead__logo col-xl-2 col-lg-2 col-md-8 col-8'>
+          <a href='" . $linkhome . "' class='masthead__logo-link'>
+          <img src='" . $linklogo . "' alt='' />
+          </a>
+          </div>
+          <ul class='masthead__list justify-content-start col-xl-5 col-lg-5 d-xl-flex d-lg-flex d-md-none d-none'>
+          <li class='masthead__item'>
+          <a
+          href='" . $duongdan . "'
+          class='masthead__item-link'
+          >SEARCH PAGE</a
+          >
+          </li>
+          <li class='masthead__item'>
+          <a
+          href='" . $linkcart . "'
+          class='masthead__item-link'
+          >CART</a
+          >
+          </li>
+
+          </ul>
+          <ul class='masthead__list row align-items-center justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flexd-none'>
+          ";
+                  ?>
 <?php
-  if(!isset($_GET['msg']) && !isset($_SESSION['username'])) {
-    echo "
-    <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
-      LOGIN
-    </li>
-    <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
-      REGISTER
-    </li>
-";
-  } else if(isset($_GET['msg'])) {
-        if($_GET['msg'] == "done"){
-          echo "<div style='font-size:1.3rem;font-weight:500; color:#008000cc'>Bạn đã đăng ký tài khoản thành công</div>
-                <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
-                  LOGIN
-                </li>
-          ";
-      } else if($_GET['msg'] == "unvalid-data") {
-          echo "<div style='font-size:1.3rem;font-weight:500; color:#aaaa11'>Warning: Vui lòng kiểm tra lại dữ liệu nhập vào</div>
-                <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
-                  REGISTER
-                </li>
-          ";
-      } else if($_GET['msg'] =="duplicate"){
-          echo "<div style='font-size:1.3rem;font-weight:500; color:#aaaa11'>Warning: Tài khoản của bạn đã tồn lại</div>
-                <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
-                  REGISTER
-                </li>
-          ";
-      } else if($_GET['msg']=="login-fail") {
-          echo "<div style='font-size:1.3rem;font-weight:500; color:#8a0707'>Error: Tài khoản và mật khẩu không đúng. Vui lòng kiểm tra lại !</div>
-                <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
-                  LOGIN
-                </li>
-          ";
-      
-      } else if($_GET['msg']=='log-out') {
-        echo "
-            <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
-              LOGIN
-          </li>
-          <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
-              REGISTER
-          </li>
-        ";
-      }
-  }
-  if(isset($_SESSION['username'])) {
-      echo "
+if (isset($_SESSION['username'])) {
+  echo "
             <li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
               <div class='user'>
                 <span class='text-uppercase' style='color: #706f6f;
-                font-weight: 700; letter-spacing:1px'>".$_SESSION['username']."</span>
+                font-weight: 700; letter-spacing:1px'>" . $_SESSION['username'] . "</span>
               </div>
           </li>
           <li class='masthead__item d-xl-block d-lg-block d-md-none d-none'>
-              <form action='".$linkdangxuat."'>
+              <form action='" . $linkdangxuat . "'>
                 <input style='
                 color: var(--black-color);
                 font-size: 1.4rem;
@@ -170,7 +154,16 @@ echo "
               </form>
           </li>
       ";
-  }
+} else {
+  echo "
+        <li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
+          LOGIN
+        </li>
+        <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
+          REGISTER
+        </li>
+    ";
+}
 
 ?>
 <?php
@@ -181,5 +174,22 @@ echo "
 </div>
 </header>
 ";
-
+//
+if (!isset($_GET['msg']) && !isset($_SESSION['username'])) {
+} 
+else if (isset($_GET['msg'])) {
+  if ($_GET['msg'] == "done") {
+    echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#008000cc'>Bạn đã đăng ký tài khoản thành công</div>";
+  } else if ($_GET['msg'] == "unvalid-data") {
+    echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#aaaa11'>Vui lòng kiểm tra lại dữ liệu nhập vào</div>";
+  } else if ($_GET['msg'] == "duplicate") {
+    echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#aaaa11'>Tài khoản của bạn đã tồn lại</div>";
+  } else if ($_GET['msg'] == "login-fail") {
+    echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#8a0707'>Tài khoản và mật khẩu không đúng. Vui lòng kiểm tra lại !</div>";
+  } else if ($_GET['msg'] == 'log-out') {
+    echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#787878'>Bạn đã đăng xuất... :((</div>";
+  } else if ($_GET['msg'] == 'login-success') {
+    echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#008000cc'>Đăng nhập thành công :)) </div>";
+}
+}
 ?>

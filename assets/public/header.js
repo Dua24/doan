@@ -47,9 +47,11 @@ window.onload = function() {
             showModal("login")
         }
     }
+    if(loginInMenu)
     loginInMenu.onclick = function() {
         showModal("login")
     }
+    if(registerInMenu)
     registerInMenu.onclick = function() {
         showModal("register")
     }
