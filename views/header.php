@@ -192,4 +192,8 @@ else if (isset($_GET['msg'])) {
     echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#008000cc'>Đăng nhập thành công :)) </div>";
 }
 }
+
+if(isset($_SESSION['role'])) {
+  echo "Day la admin";
+}
 ?>

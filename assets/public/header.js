@@ -4,7 +4,6 @@ window.onload = function() {
     const loginInMenu = document.querySelector(".modal-inner__item.login")
     const registerInMenu = document.querySelector(".modal-inner__item.register")
     
-
     // handle click size changes
     ;(function() {
         const size = document.querySelectorAll(".form-cart__size-item");

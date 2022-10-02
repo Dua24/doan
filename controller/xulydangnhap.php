@@ -9,8 +9,14 @@ taoKetNoi($link);
 
 if(isset($_POST['lusername']) && isset($_POST['lpassword'])) {
     if(dangnhap($link,$_POST['lusername'],$_POST['lpassword'])) {
-        giaiPhongBoNho($link,true);
-        header("Location: ../index.php?msg=login-success");
+        if(isset($_SESSION['role'])) {
+            giaiPhongBoNho($link,true);
+            header("Location: ../views/admin.php");
+        }else {
+            giaiPhongBoNho($link,true);
+            header("Location: ../index.php?msg=login-success");
+        }
+        
     } else {
         giaiPhongBoNho($link,true);
         header("Location: ../index.php?msg=login-fail");
