@@ -1,15 +1,13 @@
 <?php
-if (is_array($listCategory) || is_object($listCategory))
-{
-    foreach($listCategory as $category) {
-        echo "
-            <li class='category-item'>
-                <a href='./searchPage.php?dm=" . $category->getId() . "&dm_ten=". $category->getTen()."' class='category-item-link'>
-                    ".$category->getTen()."
-                </a>
-            </li>
-            ";
+if (is_array($listCategory) || is_object($listCategory)) {
+    foreach ($listCategory as $category) {
+?>
+        <li class="category-item" style="cursor:pointer">
+            <a onclick="handleAjax(event,'?dm=<?= $category->getId() ?>&dm_ten=<?= $category->getTen() ?>')" class="category-item-link">
+                <?= $category->getTen() ?>
+            </a>
+        </li>
+<?php
     }
 }
-
 ?>

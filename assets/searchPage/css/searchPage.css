@@ -39,6 +39,9 @@
 
 
 }
+.page-item{
+    cursor: pointer;
+}
 .main-sPage__header-sort-label{
     color: rgba(102,102,102,.7);
     margin-right: 16px;

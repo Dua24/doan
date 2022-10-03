@@ -176,8 +176,7 @@ echo "
 ";
 //
 if (!isset($_GET['msg']) && !isset($_SESSION['username'])) {
-} 
-else if (isset($_GET['msg'])) {
+} else if (isset($_GET['msg'])) {
   if ($_GET['msg'] == "done") {
     echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#008000cc'>Bạn đã đăng ký tài khoản thành công</div>";
   } else if ($_GET['msg'] == "unvalid-data") {
@@ -190,10 +189,8 @@ else if (isset($_GET['msg'])) {
     echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#787878'>Bạn đã đăng xuất... :((</div>";
   } else if ($_GET['msg'] == 'login-success') {
     echo "<div style='text-align:center; margin: 6px 0 10px 0;font-size:1.3rem;font-weight:500; color:#008000cc'>Đăng nhập thành công :)) </div>";
-}
+  }
 }
 
-if(isset($_SESSION['role'])) {
-  echo "Day la admin";
-}
+
 ?>
