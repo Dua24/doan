@@ -1,6 +1,5 @@
 <?php
-include '../truyvandb/category_render.php';
-include '../truyvandb/searchInput_render.php';
+include "../typeProduct/typeProduct.php";
 include '../truyvandb/pagination_render.php';
 
 if (isset($slg)) {

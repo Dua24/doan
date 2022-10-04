@@ -58,7 +58,7 @@
             <!-- search input -->
             <form style="height:30px; font-size:15px" class="col-lg-4 d-lg-flex d-none">
               <input autocomplete="off" type="text" class="main-sPage-searc" name="search">
-              <input onclick="handleAjax(event,'','main-sPage-searc')" autocomplete="off" style="background-color:#000; color:#fff; border-radius:none; font-weight:600; margin-left:2px" type="submit" value="Tìm kiếm">
+              <input onclick="handleAjax(event,'','main-sPage-searc','search')" autocomplete="off" style="background-color:#000; color:#fff; border-radius:none; font-weight:600; margin-left:2px" type="submit" value="Tìm kiếm">
             </form>
             <div class="menu-filter-mobile d-lg-none d-block">
               <i class="fa-solid fa-bars"></i>
@@ -85,7 +85,7 @@
             </div>
             <div class="row col-lg-4 col-12 main-sPage__header-sort">
               <form>
-                <select onchange="handleAjax(event,'','control-sort')" class="form-control control-sort" name="sort">
+                <select onchange="handleAjax(event,'','control-sort','sort')" class="form-control control-sort" name="sort">
                   <option value="">Default select</option>
                   <option value="desc">Sort by price: desc</option>
                   <option value="asc">Sort by price: asce</option>
@@ -115,12 +115,6 @@
                   include '../controller/productController.php';
                   $product = new Product_Controller();
                   $product->invoke();
-                  ?>
-                </div>
-                <div class="sPage__content-product-sub">
-                  <?php
-                  include '../controller/pagination_logic.php';
-
                   ?>
                 </div>
               </div>
@@ -179,7 +173,7 @@
             </div>
             <div class="form-group form-group__wrapper">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" name="lpassword" placeholder="Password">
+              <input type="password" class="form-control" autocomplete="off" id="exampleInputPassword1" name="lpassword" placeholder="Password">
             </div>
             <div class="form-check form-check__wrapper">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -207,11 +201,11 @@
             </div>
             <div class="form-group form-group__wrapper">
               <label for="exampleInputPassword2">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword2" name='rpassword' placeholder="Password">
+              <input type="password" class="form-control" autocomplete="off" id="exampleInputPassword2" name='rpassword' placeholder="Password">
             </div>
             <div class="form-group form-group__wrapper">
               <label for="exampleInputPassword3">Confirm Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword3" name='repassword' placeholder="Password">
+              <input type="password" class="form-control" autocomplete="off" id="exampleInputPassword3" name='repassword' placeholder="Password">
             </div>
             <button type="submit" class="btn btn__primary">Register</button>
           </form>
@@ -223,22 +217,21 @@
     </div>
   </div>
   <script>
-    function handleAjax(e, sufUrl, add) {
+    function handleAjax(e, sufUrl, className, name) {
       e.preventDefault();
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementsByTagName("html")[0].innerHTML = this.responseText
+          document.getElementsByClassName("sPage__content-product-main")[0].innerHTML = this.responseText
         }
       }
-      if (!add) {
-        xmlhttp.open("GET", "searchPage.php" + sufUrl, true);
-        xmlhttp.send();
-      } else if (add === "control-sort") {
-        xmlhttp.open("GET", "searchPage.php" + "?sort=" + document.getElementsByClassName("control-sort")[0].value, true);
+
+
+      if (name) {
+        xmlhttp.open("GET", "productView.php" + "?" + name + "=" + document.getElementsByClassName(className)[0].value, true);
         xmlhttp.send();
       } else {
-        xmlhttp.open("GET", "searchPage.php" + "?search=" + document.getElementsByClassName(add)[0].value, true);
+        xmlhttp.open("GET", "productView.php" + sufUrl, true);
         xmlhttp.send();
       }
 

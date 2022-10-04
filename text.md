@@ -1,42 +1,5 @@
-<!-- render -->
-
-1. category -> dm
-2. search input -> search
-3. sort -> sort
-
-/
-                    <span class='header-cart_price'> 0 </span>
-                    <span class='header-cart__symbol'>₫</span>
-                  </span>
-                  <span class='header-cart__icon'>
-                    <strong> 0 </strong>
-
-login reigster
-<li class='masthead__item masthead__item-login d-xl-block d-lg-block d-md-none d-none'>
-      LOGIN
-    </li>
-    <li class='masthead__item masthead__item-register d-xl-block d-lg-block d-md-none d-none'>
-      REGISTER
-    </li>
-
-user 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  <!-- CART IN <= IPAD -->
+
             <div class='modal-layout'>
               <div class='modal-inner modal-inner-cart'>
                 <!-- No Cart -->
@@ -103,7 +66,7 @@ user
                           <span>x</span>
                         </div>
                       </li>
-                      
+
                     </ul>
                     <div class='cart-list__control'>
                       <div class='cart-list__subtotal'>
@@ -143,7 +106,7 @@ user
                 </div>
                 </div>
             ";
-            
+
 
 
               <div class='cart-item'>

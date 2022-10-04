@@ -121,6 +121,7 @@ window.onload = function() {
         const mainHeaderSort = document.querySelector(".main-sPage__header-sort")
         const imgdetailProduct = this.document.querySelector(".control-detail__img-product")
         if(document.body.clientWidth<=992) {
+
             const header_label = document.querySelector(".header__top-label")
             header_label.style.textAlign="center"
             mastheadLogo.style.textAlign="center"

@@ -17,6 +17,8 @@ if (is_array($listProduct) || is_object($listProduct)) {
         <?php
         } ?>
     </div>
+
 <?php
+    include "../controller/pagination_logic.php";
 }
 ?>
