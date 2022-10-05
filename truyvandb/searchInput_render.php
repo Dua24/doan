@@ -4,7 +4,6 @@ if (isset($_GET['search'])) {
     if ($_GET['search'] != "") {
         $result = chayTruyVanTraVeDL($link, "select * from tbl_sanpham where ten_sp like '%" . $_GET['search'] . "%'");
         $slg = chayTruyVanTraVeDL($link, "select count(*) from tbl_sanpham where ten_sp like '%" . $_GET['search'] . "%'");
-        echo mysqli_fetch_row($slg)[0];
     }
     if ($_GET['search'] == "") {
         require '../truyvandb/pagination_render.php';
