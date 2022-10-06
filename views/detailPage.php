@@ -59,7 +59,7 @@
 
             </ul>
           </div>
-          <div class="col-xl-9 col-lg-9 col-12 contain-detail__product">
+          <div class="col-xl-9 col-lg-9 col-12 contain-detail__product sPage__content-product-main">
             <?php
             include '../controller/productController.php';
             $detailProduct = new Product_Controller();
@@ -199,5 +199,10 @@
   </div>
 
 </body>
+<script>
+  function handleAjax() {
+
+  }
+</script>
 
 </html>

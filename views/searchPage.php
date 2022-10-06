@@ -87,8 +87,8 @@
               <form>
                 <select onchange="handleAjax(event,'','control-sort','sort')" class="form-control control-sort" name="sort">
                   <option value="">Default select</option>
-                  <option value="desc">Sort by price: desc</option>
-                  <option value="asc">Sort by price: asce</option>
+                  <option value="desc">Sort by price: Giảm dần</option>
+                  <option value="asc">Sort by price: Tăng dần</option>
 
                 </select>
               </form>
@@ -219,6 +219,8 @@
   <script>
     function handleAjax(e, sufUrl, className, name) {
       e.preventDefault();
+      document.getElementsByClassName("modal-layout-menu")[0].classList.remove("menu")
+      document.getElementsByClassName("modal-layout-filter")[0].classList.remove("filter")
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -229,6 +231,7 @@
 
       if (name) {
         xmlhttp.open("GET", "productView.php" + "?" + name + "=" + document.getElementsByClassName(className)[0].value, true);
+        document.getElementsByClassName(className)[0].value = "";
         xmlhttp.send();
       } else {
         xmlhttp.open("GET", "productView.php" + sufUrl, true);

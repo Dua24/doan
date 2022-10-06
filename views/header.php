@@ -36,9 +36,9 @@ if (!isset($_SESSION)) {
           <div class="modal-layout modal-layout-menu">
             <div class="contain-modal">
               <div class="modal-inner modal-inner-menu">
-                <form action="" class="modal-inner__search">
+                <form class="modal-inner__search">
                   <input autocomplete="off" type="text" class="modal-inner__search-input" name="search">
-                  <button class="btn btn__primary">
+                  <button onclick="handleAjax(event,'','modal-inner__search-input','search')" href="searchPage.php" class="btn btn__primary">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </form>
@@ -72,7 +72,6 @@ if (!isset($_SESSION)) {
                     </li>
                   <?php
                   } else { ?>
-                    echo "
                     <li class="modal-inner__item">
                       <a href="<?= $linksearchpage ?>" class="modal-inner__item-link">search page</a>
                     </li>
