@@ -83,10 +83,10 @@
     margin-bottom: 20px;
 
 }
-/* .sPage__content-product-item:hover{
+.sPage__content-product-item:hover{
     filter: brightness(0.95);
-    transition: filter linear 0.15s;
-} */
+    transition: filter linear 0.10s;
+}
 .sPage__content-product-img{
     position: relative;
     z-index: -2;
