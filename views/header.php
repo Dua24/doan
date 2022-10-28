@@ -38,10 +38,11 @@ if (!isset($_SESSION)) {
               <div class="modal-inner modal-inner-menu">
                 <form class="modal-inner__search">
                   <input autocomplete="off" type="text" class="modal-inner__search-input" name="search">
-                  <button onclick="handleAjax(event,'','modal-inner__search-input','search')" href="searchPage.php" class="btn btn__primary">
+                  <button onclick="handleAjax(event,'','main-sPage-searc','search')" class="btn btn__primary">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </form>
+
                 <ul class="modal-inner__list">
 
 
@@ -57,6 +58,14 @@ if (!isset($_SESSION)) {
                     <li class="modal-inner__item">
                       <a href="<?= $linkcart ?>" class="modal-inner__item-link">cart page</a>
                     </li>
+                    <?php
+                    if (isset($_SESSION['role'])) { ?>
+                      <li class="modal-inner__item">
+                        <a href="<?= $linkadmin ?>" class="modal-inner__item-link">ADMIN MANAGER</a>
+                      </li>
+                    <?php
+                    }
+                    ?>
                     <li class="modal-inner__item">
                       <form action="<?= $linkdangxuat ?>">
                         <input autocomplete="off" style="
@@ -115,7 +124,14 @@ if (!isset($_SESSION)) {
           <li class="masthead__item">
             <a href="<?= $linkcart ?>" class="masthead__item-link">CART</a>
           </li>
-
+          <?php
+          if (isset($_SESSION['role'])) { ?>
+            <li class="masthead__item" style="margin-left:20px">
+              <a href="<?= $linkadmin ?>" class="masthead__item-link">ADMIN MANAGER</a>
+            </li>
+          <?php
+          }
+          ?>
         </ul>
         <ul class="masthead__list row align-items-center justify-content-end col-xl-5 col-lg-5 col-md-2 col-2 d-xl-flex d-lg-flexd-none">
 

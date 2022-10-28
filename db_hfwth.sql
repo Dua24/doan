@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 02, 2022 lúc 02:42 PM
--- Phiên bản máy phục vụ: 10.4.24-MariaDB
--- Phiên bản PHP: 8.1.6
+-- Thời gian đã tạo: Th10 28, 2022 lúc 03:17 PM
+-- Phiên bản máy phục vụ: 10.4.25-MariaDB
+-- Phiên bản PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -73,36 +73,32 @@ CREATE TABLE `tbl_sanpham` (
 --
 
 INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `gia_sp`, `img_sp`, `dm_id`) VALUES
-(1, '2020 Travel Jacket', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/travel-jk-2020-300x300.jpg', 5),
-(2, '13 Long Sleeve', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/13-Long-sleeve-300x298.jpg', 6),
-(3, '2021 Travel Jacket', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/2020-Travel-jacket.jpg', 5),
-(4, '2021 Hoodie', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/2021-hoodie-1-300x300.jpg', 4),
-(5, '2021 Tee', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/received_872269623650048-300x300.jpeg', 10),
-(6, '2022 Hoodie', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/7A517C14-0145-4B44-99E9-93B170376DEB.jpeg', 4),
-(7, '420 Long Sleeve', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2022/04/275836079_681406796531237_4606127084557607464_n-300x300.jpg', 6),
-(8, '4×4 Sweater', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/4x4_1-300x300.png', 8),
-(9, '7 Years Anniversary tee', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2022/03/275912827_3308037416149087_666438548718182088_n-300x300.jpg', 10),
-(10, 'All Black backpack', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2022/03/275838259_1157483268330983_378567575171538868_n-300x300.jpg', 1),
-(11, 'All Black Jacket', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/all-black-jacket-300x300.png', 5),
-(12, 'All Black Summer tee', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2022/08/298199601_732274261406691_4792795996622145105_n-300x300.jpg', 10),
-(13, 'B/W Jacket', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/bw-300x300.jpg', 5),
-(14, 'B/W long sleeve', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2022/05/3-300x300.jpg', 6),
-(15, 'Bag Summer', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/bag-summer1-300x300.jpg', 1),
+(1, '2020 Travel Jacket', 550, 'https://cf.shopee.vn/file/0699dbf7a1cd4f2863e7df73ffdaa4e3', 5),
+(2, '13 Long Sleeve', 550, 'https://cf.shopee.vn/file/cd058188f51a1e93387bedf718c6b244_tn', 6),
+(3, '2021 Travel Jacket', 550, 'https://cf.shopee.vn/file/be4500077fefdbff1f1a358ffb5ed9a6_tn', 5),
+(4, '2021 Hoodie', 500, 'https://cf.shopee.vn/file/ad1318cc500a34ad6ea370782cb27add_tn', 4),
+(6, '2022 Hoodie', 500, 'https://cf.shopee.vn/file/fff2c605d5020e51db0c40f5ea79e3b5_tn', 4),
+(7, '420 Long Sleeve', 500, 'https://cf.shopee.vn/file/7e956cfa0af0e914b0c8a365da6f958e_tn', 6),
+(8, '4×4 Sweater', 500, 'https://cf.shopee.vn/file/cf0e4bae459ef72f232aa5eb41cd5665_tn', 8),
+(10, 'All Black backpack', 500, 'https://cf.shopee.vn/file/87f49aeaa9a9ea97ccf4ebfa6c6d0f5c_tn', 1),
+(11, 'All Black Jacket', 550, 'https://cf.shopee.vn/file/a0b693799499ab956bc128f02a4b0487_tn', 5),
+(13, 'B/W Jacket', 500, 'https://cf.shopee.vn/file/93ca64858a424eaf7003d784c998629e_tn', 5),
+(14, 'B/W long sleeve', 550, 'https://cf.shopee.vn/file/b87261b3a63ab24da2d13006d2c891ea_tn', 6),
+(15, 'Bag Summer', 350, 'https://cf.shopee.vn/file/45d68c430462ca07b666475badd18ea6_tn', 1),
 (16, 'Baseball Logo Jacket', 650, 'https://havefunwiththehomies.com/wp-content/uploads/2022/07/b93ffa214ba54a4a8dd6178a3fab9c31_tn.jpg', 5),
 (17, 'Basketball Jacket', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/IMG_6214-768x768.jpg', 5),
-(18, 'Bee Hoodie', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/IMG_20211116_155359-300x300.jpg', 4),
+(18, 'Bee Hoodie', 500, 'https://cf.shopee.vn/file/4cd09340ec879a3b8c47d15f95e13652_tn', 4),
 (19, 'Bee Sweater', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/received_327203865426327-300x300.jpeg', 8),
 (20, 'Bee Tee', 300, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/received_1217243362097503-300x300.jpeg', 10),
 (21, 'Best Friends For Life tee', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2022/03/275581806_1669575246711900_4078449404988102382_n-300x300.jpg', 10),
 (22, 'Black Down Vest', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/Black-Down-Vest1-300x300.jpg', 1),
-(23, 'Black Hoodie', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/received_503753370654841-300x300.jpeg', 4),
-(24, '16 Long sleeve', 600, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/13-Long-sleeve-300x298.jpg', 6),
+(23, 'Black Hoodie', 500, 'https://cf.shopee.vn/file/c7c69d863135c63ee7cab4fbd86fa17b_tn', 4),
+(24, '16 Long sleeve', 600, 'https://cf.shopee.vn/file/4d819e25676dba93789b091998b49d76_tn', 6),
 (25, 'BB/W2 sleeve', 450, 'https://havefunwiththehomies.com/wp-content/uploads/2022/05/2.jpg', 6),
 (26, 'Black Shirt', 390, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/received_450508989751870-300x300.jpeg', 9),
 (27, 'Black Signature Shoes', 890, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/shoes-black1.jpg', 14),
 (28, 'Black White Shorts', 420, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/IMG_7246_Facetune_30-05-2021-15-02-56-300x300.jpeg', 13),
 (29, 'Black Windbearker Logo', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/black-windbreaker-1-300x300.jpg', 1),
-(30, 'Blank Tee', 190, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/received_317155203274808-300x300.jpeg', 10),
 (31, 'Bracelet', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/braclet-300x300.jpg', 3),
 (32, 'Bum Bag', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/bum-bag.jpg', 3),
 (33, 'Camp Table', 600, 'https://havefunwiththehomies.com/wp-content/uploads/2021/12/Camp-table-300x300.png', 1),
@@ -133,7 +129,7 @@ INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `gia_sp`, `img_sp`, `dm_id`) VALUE
 (58, 'Pocket jacket', 600, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/275719811_763798908315373_8181744820904500384_n-300x300.jpg', 5),
 (59, 'Puffer jacket', 600, 'https://havefunwiththehomies.com/wp-content/uploads/2022/03/Puffer-jacket-600_1-300x300.jpg', 5),
 (60, 'Pullover Logo', 500, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/received_183758130628753-768x727.jpeg', 7),
-(61, 'Robot Hoodie', 550, 'https://havefunwiththehomies.com/wp-content/uploads/2021/10/1.jpg', 4),
+(61, 'Robot Hoodie', 550, 'https://cf.shopee.vn/file/1fb6432b41f813e4433130abe36455f8_tn', 4),
 (62, 'Shoulder Bag', 350, 'https://havefunwiththehomies.com/wp-content/uploads/2021/11/bag.jpg', 2),
 (63, 'Skull shorts', 450, 'https://havefunwiththehomies.com/wp-content/uploads/2022/08/IMG_20220806_220423-300x300.jpg', 13),
 (64, 'Summer 22 Sunglasses', 300, 'https://havefunwiththehomies.com/wp-content/uploads/2022/08/4c1ca1f9e3d5640b99ffc836ebf7860d_tn.jpg', 3),
@@ -168,7 +164,10 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`user_id`, `user_name`, `user_password`, `role`) VALUES
 (2, 'toiladuynguyen', '25f9e794323b453885f5181f1b624d0b', '0'),
-(3, 'admin12345678', '25f9e794323b453885f5181f1b624d0b', '1');
+(4, 'toiladuynguyen1', '25f9e794323b453885f5181f1b624d0b', '0'),
+(5, 'toiladuynguyen12', '25f9e794323b453885f5181f1b624d0b', '0'),
+(18, 'admin1', '25f9e794323b453885f5181f1b624d0b', '1'),
+(26, 'toilaadmin123456789', '25f9e794323b453885f5181f1b624d0b', '1');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -200,19 +199,19 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT cho bảng `tbl_danhmuc`
 --
 ALTER TABLE `tbl_danhmuc`
-  MODIFY `dm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `dm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
-  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

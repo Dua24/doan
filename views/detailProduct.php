@@ -46,7 +46,7 @@
             <span class="quantity-control quantity-control__minus">
               <span>-</span>
             </span>
-            <input value="1" type="text" class="control-quantity__current" name="quantity">
+            <input value="1" type="number" class="control-quantity__current" min="1" max="10" name="quantity">
             <span class="quantity-control quantity-control__plus">
               <span>+</span>
             </span>

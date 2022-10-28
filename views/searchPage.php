@@ -39,6 +39,7 @@
     $linkhome = "../index.php";
     $linksearchpage = "";
     $linkcart = "cart.php";
+    $linkadmin = "../views/admin/admin.php";
     $linkdangxuat = "../controller/dangxuat.php";
     include "header.php";
     ?>
